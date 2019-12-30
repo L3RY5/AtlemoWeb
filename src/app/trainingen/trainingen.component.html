@@ -1,0 +1,437 @@
+<div class=bodyPageDive>
+  <mat-tab-group>
+    <!-- *****************************Locatie en tijd*************************************************** -->
+    <mat-tab class="tabsContent" label="Locatie">
+        <h5>Kan/Ben/Pup/Min</h5>
+         <mat-divider class="trainingDivide"></mat-divider>
+      <diV class="pisteTrainingDiv">
+        <mat-table [dataSource]="dataSourcePiste" class="mat-elevation-z8">
+          <!-- Position Column -->
+          <ng-container matColumnDef="dag">
+            <mat-header-cell *matHeaderCellDef> Dag </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.dag}} </mat-cell>
+          </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="tijd">
+            <mat-header-cell *matHeaderCellDef> Tijd </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.tijd}} </mat-cell>
+          </ng-container>
+
+          <!-- Weight Column -->
+          <ng-container matColumnDef="locatie">
+            <mat-header-cell *matHeaderCellDef> Locatie </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.locatie}} </mat-cell>
+          </ng-container>
+
+
+
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+
+      </diV>
+     
+
+      <h5>Kad/Sch/Jun/Sen/Mas</h5>
+        <mat-divider class="trainingDivide"></mat-divider>
+      <div class="pisteTrainingDiv">
+        <mat-table [dataSource]="dataSourceKracht" class="mat-elevation-z8">
+          <!-- Position Column -->
+          <ng-container matColumnDef="dag">
+            <mat-header-cell *matHeaderCellDef> Dag </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.dag}} </mat-cell>
+          </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="tijd">
+            <mat-header-cell *matHeaderCellDef> Tijd </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.tijd}} </mat-cell>
+          </ng-container>
+
+          <!-- Weight Column -->
+          <ng-container matColumnDef="locatie">
+            <mat-header-cell *matHeaderCellDef> Locatie </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.locatie}} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="soort">
+            <mat-header-cell *matHeaderCellDef> Soort </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.soort}} </mat-cell>
+          </ng-container>
+
+
+
+          <mat-header-row *matHeaderRowDef="displayedColumnsVolwasen"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumnsVolwasen;"></mat-row>
+        </mat-table>
+
+      </div>
+     <h5>* Sippelberg : Mahatma Gandhilaan 5 ,1080 Molenbeek</h5>
+     <h5>** Foyer : Werkhuizenstraat 25 ,1080 Molenbeek</h5>
+
+    </mat-tab>
+
+
+    <!-- *****************************Begin trainers*************************************************** -->
+    <mat-tab class="tabsContent" label="Trainers">
+      <!--   trainers Kangoeroes indeleing -->
+      <h4>Kangoeroes : 2014-2013</h4>
+      <mat-divider></mat-divider>
+      <div class="trainersCardGroup">
+        <div class=trainerCardDiv>
+          <mat-card class="example-card">
+            <img height="350" mat-card-image src="./../../assets/img/fullsizeoutput_1e6f.jpeg"
+              alt="Trainer Mouad">
+            <mat-card-content>
+              <p>Moad Benjaafar</p>
+              <p>18 jaar</p>
+               <p>Aspirant Initiator Atletiek</p>
+              <p>2 jaar trainers ervaring</p>
+              <p></p>
+            </mat-card-content>
+
+          </mat-card>
+        </div>
+        <div class=trainerCardDiv>
+          <mat-card class="example-card">
+            <img  height="350" mat-card-image src="./../../assets/img/fullsizeoutput_1e76.jpeg"
+              alt="Trinar Nidal">
+            <mat-card-content>
+              <p>Nidal Amhot Mohamed</p>
+              <p>16 jaar</p>
+              <p>Aspirant Initiator Atletiek</p>
+              <p>1 jaar trainers ervaring</p>
+            </mat-card-content>
+
+          </mat-card>
+        </div>
+       <!-- <div class=trainerCardDiv>
+          <mat-card class="example-card">
+            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+              alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p>Sedric Lodonou</p>
+              <p>26 jaar</p>
+              <p>Initiator atletiek,bewegens animator</p>
+              <p>6 jaar trainers ervaring</p>
+            </mat-card-content>
+
+          </mat-card>
+        </div>-->
+        <!-- einde 1 trainersgroep per jaar  -->
+
+      </div>
+      <!-- einde Kangoeroes kaart -->
+
+      <!--   trainers benjamins indeleing -->
+      <br>
+      <h4>Benjamins : 2012-2011</h4>
+      <mat-divider></mat-divider>
+      <div class="trainersCardGroup">
+        <div class=trainerCardDiv>
+          <mat-card class="example-card">
+
+            <img mat-card-image  height="350" src="./../../assets/img/fullsizeoutput_1e7e.jpeg"
+              alt="Trainer Marwan">
+            <mat-card-content>
+              <p>Marwane Fatihi</p>
+              <p>18 jaar</p>
+              <p>Aspirant Initiator Atletiek</p>
+              <p>2 jaar trainers ervaring</p>
+              <p>Specialiteit: Lange afstand</p>
+            </mat-card-content>
+
+          </mat-card>
+        </div>
+        <div class=trainerCardDiv>
+          <mat-card class="example-card">
+            <img mat-card-image height="350" src="./../../assets/img/fullsizeoutput_1e78.jpeg"
+              alt="Trainer Nada">
+            <mat-card-content>
+              <p>Nada Ben Abdelslam</p>
+              <p>20 jaar</p>
+              <p>Aspirant Initiator Atletiek</p>
+              <p>2 jaar trainers ervaring</p>
+            </mat-card-content>
+
+          </mat-card>
+        </div>
+        <!--<div class=trainerCardDiv>
+          <mat-card class="example-card">
+            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+              alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p>Sedric Lodonou</p>
+              <p>26 jaar</p>
+              <p>Initiator atletiek,bewegens animator</p>
+              <p>6 jaar trainers ervaring</p>
+            </mat-card-content>
+
+          </mat-card>
+        </div>-->
+        <!-- einde 1 trainersgroep per jaar  -->
+
+      </div>
+      <!-- einde benjamins kaart -->
+
+      <!--   trainers Pupillen  indeleing -->
+      <h4>Pupillen : 2010-2009</h4>
+      <mat-divider></mat-divider>
+      <div class="trainersCardGroup">
+        <div class=trainerCardDiv>
+          <mat-card class="example-card">
+
+            <img mat-card-image height="350" src="./../../assets/img/fullsizeoutput_1e7c.jpeg"
+              alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p>Hamza Tajaourt</p>
+              <p>24 jaar</p>
+              <p>Bachelor LO</p>
+              <p>1 jaar trainers ervaring</p>
+              <p>Specialiteit: Lange afstand/Sprint</p>
+            </mat-card-content>
+
+          </mat-card>
+        </div>
+        <div class=trainerCardDiv>
+          <mat-card class="example-card">
+            <img mat-card-image height="350" src=""
+              alt="trainer Walid">
+            <mat-card-content>
+              <p>Walid El Yaakoubi</p>
+              <p>16 jaar</p>
+              <p>Aspirant Initiator Atletiek</p>
+              <p>3 jaar trainers ervaring</p>
+              <p>Specialiteit: Sprint</p>
+            </mat-card-content>
+
+          </mat-card>
+        </div>
+        <!--<div class=trainerCardDiv>
+          <mat-card class="example-card">
+            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+              alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p>Sedric Lodonou</p>
+              <p>26 jaar</p>
+              <p>Initiator atletiek,bewegens animator</p>
+              <p>6 jaar trainers ervaring</p>
+            </mat-card-content>
+
+          </mat-card>
+        </div>-->
+        <!-- einde 1 trainersgroep per jaar  -->
+
+      </div>
+      <!-- einde Pupillen kaart -->
+
+      <!--   trainers Miniemen indeleing -->
+      <h4>Miniemen : 2008-2007</h4>
+      <mat-divider></mat-divider>
+      <div class="trainersCardGroup">
+        <div class=trainerCardDiv>
+          <mat-card class="example-card">
+
+            <img mat-card-image height="350" src="./../../assets/img/fullsizeoutput_1e88.jpeg"
+              alt="Trainer chinook">
+            <mat-card-content>
+              <p>Chinook Byrne</p>
+              <p>18 jaar</p>
+              <p>Aspirant Initiator Atletiek</p>
+              <p>2 jaar trainers ervaring</p>
+              <p>Specialiteit: Lange afstand</p>
+            </mat-card-content>
+
+          </mat-card>
+        </div>
+        <div class=trainerCardDiv>
+          <mat-card class="example-card">
+            <img mat-card-image height="350" src="./../../assets/img/fullsizeoutput_1e5d.jpeg"
+              alt="Trainer Ayou F">
+            <mat-card-content>
+              <p>Ayoub Fallah</p>
+              <p>22 jaar</p>
+              <p>Initiator atletiek,Instructeur</p>
+              <p>6 jaar trainers ervaring</p>
+              <p>Specialiteit: Werpnummers/Meerkamp</p>
+            </mat-card-content>
+
+          </mat-card>
+        </div>
+        <div class=trainerCardDiv>
+          <mat-card class="example-card">
+            <img mat-card-image height="350" src="./../../assets/img/fullsizeoutput_1e67.jpeg"
+              alt="Trainer Ayoub Klein">
+            <mat-card-content>
+              <p>Ayoub El Yaakoubi</p>
+              <p>18 jaar</p>
+              <p>Aspirant Initiator Atletiek</p>
+              <p>3 jaar trainers ervaring</p>
+              <p>Specialiteit : Meerkamp</p>
+            </mat-card-content>
+
+          </mat-card>
+        </div>
+        <!-- einde 1 trainersgroep per jaar  -->
+
+      </div>
+      <!-- einde Miniemen kaart -->
+
+      <!--   trainers Kadetten  indeleing -->
+      <h4>Kadetten en Scholieren  : 2006-2003</h4>
+      <mat-divider></mat-divider>
+      <div class="trainersCardGroup">
+        <div class=trainerCardDiv>
+          <mat-card class="example-card">
+
+            <img mat-card-image height="350" src="./../../assets/img/fullsizeoutput_1e5b.jpeg"
+              alt="Trainer Sedric">
+            <mat-card-content>
+              <p>Sedric Lodonou</p>
+              <p>26 jaar</p>
+              <p>Initiator atletiek,bewegens animator</p>
+              <p>6 jaar trainers ervaring</p>
+              <p>Specialiteit: Sprint/Meerkamp</p>
+            </mat-card-content>
+
+          </mat-card>
+        </div>
+        <div class=trainerCardDiv>
+          <mat-card class="example-card">
+            <img mat-card-image height="350" src="./../../assets/img/fullsizeoutput_1e6b.jpeg"
+              alt="Triner Zakaria">
+            <mat-card-content>
+              <p>Zakaria Haik</p>
+              <p>24 jaar</p>
+              <p>Aspirant Initiator Atletiek</p>
+              <p>1 jaar trainers ervaring</p>
+               <p>Specialiteit: Middellange afstand</p>
+            </mat-card-content>
+
+          </mat-card>
+        </div>
+        <div class=trainerCardDiv>
+          <mat-card class="example-card">
+            <img mat-card-image height="350" src="./../../assets/img/fullsizeoutput_1e69.jpeg"
+              alt="Bernd Trainer">
+            <mat-card-content>
+              <p>Bernd Maier</p>
+              <p>49 jaar</p>
+              <p>Autodidact</p>
+              <p>1 jaar trainers ervaring</p>
+               <p>Specialiteit: Sprint/Kracht/Stabiliteit</p>
+            </mat-card-content>
+
+          </mat-card>
+        </div>
+        <!-- einde 1 trainersgroep per jaar  -->
+
+      </div>
+      <!-- einde Kadetten  kaart -->
+
+      <!--   trainers Scholieren indeleing -->
+      <h4>Jun/Sen/Mas : 2002-</h4>
+      <mat-divider></mat-divider>
+      <div class="trainersCardGroup">
+        <div class=trainerCardDiv>
+          <mat-card class="example-card">
+
+            <img mat-card-image height="350" src="./../../assets/img/fullsizeoutput_1e82.jpeg"
+              alt="Trainer Maarten">
+            <mat-card-content>
+              <p>Maarten Dejonghe</p>
+              <p>38 jaar</p>
+              <p>Initiator Running</p>
+              <p>2 jaar trainers ervaring</p>
+              <p>Specialiteit: <span class="specilisatieVet">Lange afstand</span></p>
+            </mat-card-content>
+
+          </mat-card>
+        </div>
+        <div class=trainerCardDiv>
+          <mat-card class="example-card">
+            <img mat-card-image height="350" src=""
+              alt="Trainer Aboubacar">
+            <mat-card-content>
+              <p>Boubacar Amadou</p>
+              <p>35 jaar</p>
+              <p>IAAF diploma</p>
+              <p>8 jaar trainers ervaring</p>
+              <p>Specialiteit: <span class="specilisatieVet">Sprint</span></p>
+            </mat-card-content>
+
+          </mat-card>
+        </div>
+        <!--<div class=trainerCardDiv>
+          <mat-card class="example-card">
+            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+              alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p>Sedric Lodonou</p>
+              <p>26 jaar</p>
+              <p>Initiator atletiek,bewegens animator</p>
+              <p>6 jaar trainers ervaring</p>
+            </mat-card-content>
+
+          </mat-card>
+        </div>-->
+        <!-- einde 1 trainersgroep per jaar  -->
+
+      </div>
+      <!-- einde Scholieren kaart -->
+
+ 
+
+      <!--   trainers Recreantengroep indeleing -->
+      <!--<h4>Recreantengroep : geboortejaar</h4>
+      <mat-divider></mat-divider>
+      <div class="trainersCardGroup">
+        <div class=trainerCardDiv>
+          <mat-card class="example-card">
+
+            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+              alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p>Sedric Lodonou</p>
+              <p>26 jaar</p>
+              <p>Initiator atletiek,bewegens animator</p>
+              <p>6 jaar trainers ervaring</p>
+            </mat-card-content>
+
+          </mat-card>
+        </div>
+        <div class=trainerCardDiv>
+          <mat-card class="example-card">
+            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+              alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p>Sedric Lodonou</p>
+              <p>26 jaar</p>
+              <p>Initiator atletiek,bewegens animator</p>
+              <p>6 jaar trainers ervaring</p>
+            </mat-card-content>
+
+          </mat-card>
+        </div>
+        <div class=trainerCardDiv>
+          <mat-card class="example-card">
+            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+              alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p>Sedric Lodonou</p>
+              <p>26 jaar</p>
+              <p>Initiator atletiek,bewegens animator</p>
+              <p>6 jaar trainers ervaring</p>
+            </mat-card-content>
+
+          </mat-card>
+        </div>
+      
+
+      </div>-->
+      <!-- einde Recreantengroep kaart -->
+      
+    </mat-tab>
+
+  </mat-tab-group>
+</div>

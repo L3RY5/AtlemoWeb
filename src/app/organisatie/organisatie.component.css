@@ -1,0 +1,68 @@
+.divRaadVanBestuur{width:100%; height:auto;display: flex;
+    flex-direction: row; flex-wrap:wrap;}
+    .RaadVanBestuurCard{width:30%; height:14em;margin-left:1em;margin-top:1em;display: flex;
+    flex-direction: row;padding-top:1em;padding-bottom:1em;background-color:rgb(235, 235, 235); border-top:rgb(51, 37, 241) ridge;border-bottom:rgb(51, 37, 241) ridge;}
+    .raadFoto{height:90%;width:30%;}    
+    .raadText{height:100%;width:60%;padding-left:1em;font-size: calc(0.5em + 0.5vw);}    
+    .raadText h1{font-size: calc(1em + 1vw);font-weight: bold;}
+    .raadFotosOpmaak{height:100%;width:100%;}
+
+
+    
+/*media tot 400px*/
+@media screen and (max-width: 400px){
+.divRaadVanBestuur{flex-direction: column;}
+.RaadVanBestuurCard{width: 97%; margin: 0 auto;height:17em;display: flex; margin-bottom: 2em;}
+.raadText h1{font-size:20px;}
+.raadText p{font-size:17px;}
+  }
+  
+  /*media van 401 tot 500px*/
+  @media screen and (min-width: 401px) and (max-width: 500px){
+    .divRaadVanBestuur{flex-direction: column;}
+.RaadVanBestuurCard{width: 97%; margin: 0 auto;height:17em;display: flex;margin-bottom: 2em;}
+.raadText h1{font-size:20px;}
+.raadText p{font-size:17px;}
+  }
+  
+  /*media van 501 tot 600px*/
+  @media screen and (min-width: 501px) and (max-width: 600px){
+    .divRaadVanBestuur{flex-direction: column;}
+    .RaadVanBestuurCard{width: 90%; margin: 0 auto;height:17em;display: flex;margin-bottom: 2em;margin-top:1em;}
+    .raadText h1{font-size:20px;}
+    .raadText p{font-size:17px;}
+   }
+  
+  /*media van 601 tot 700px*/
+  @media screen and (min-width: 601px) and (max-width: 700px){
+    .divRaadVanBestuur{flex-direction: column;}
+    .RaadVanBestuurCard{width: 80%; margin: 0 auto;height:17em;margin-top:1em;display: flex;margin-bottom: 2em;}
+    .raadText h1{font-size:20px;}
+    .raadText p{font-size:17px;}
+  }
+  
+  /*media van 701 tot 800px*/
+  @media screen and (min-width: 701px) and (max-width: 800px){
+    
+    .RaadVanBestuurCard{width: 48%; margin: 0 auto;margin-top:1em;height:17em;display: flex;margin-bottom: 2em;}
+    .raadText h1{font-size:20px;}
+    .raadText p{font-size:17px;}
+    
+  }
+  
+  /*media van 801 tot 1000px*/
+  @media screen and (min-width: 801px) and (max-width: 1000px){
+    .RaadVanBestuurCard{width: 48%; margin: 0 auto;margin-top:1em;height:17em;margin-bottom: 2em;}
+    .raadText h1{font-size:20px;}
+    .raadText p{font-size:17px;}
+  }
+
+  /*media van 1001 tot 1200px*/
+  @media screen and (min-width: 1001px) and (max-width: 1200px){
+    .RaadVanBestuurCard{width: 32%; margin: 0 auto;height:18em;margin-bottom: 2em;}
+    .raadText h1{font-size:17px;}
+    .raadText p{font-size:15px;}
+
+  }
+
+  

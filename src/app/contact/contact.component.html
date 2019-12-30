@@ -1,0 +1,89 @@
+<div class=bodyPageDive>
+   <div class="contactDivForm">
+   
+    <form class="example-form" >
+      <h1>Contacteer ons</h1>
+      <p>Tel:02/411.74.95<br>
+        info@atlemo.be
+           
+       </p>
+        <p>Of vul de onderstaarde form in.</p>
+        <table class="example-full-width" cellspacing="0"><tr>
+          <td><mat-form-field class="example-full-width">
+            <input matInput placeholder="Naam" id="naam" name="naam" [formControl]="naamFormControl"
+            [errorStateMatcher]="matcher"  required >
+            <mat-error *ngIf="naamFormControl.hasError('required')">
+              Naam is <strong>Verplicht</strong>
+            </mat-error>
+            <mat-error *ngIf="naamFormControl.hasError('whitespace')">Opgepast!! "SPATIES"
+            </mat-error>
+          </mat-form-field></td>
+          <td><mat-form-field class="example-full-width">
+            <input matInput placeholder="Voornaam"id="voorNaamForm" name="voorNaamForm" [formControl]="voorNaamFormControl"
+            [errorStateMatcher]="matcher"    required>
+            <mat-error *ngIf="voorNaamFormControl.hasError('required')">
+              voornaam is <strong>Verplicht</strong>
+            </mat-error>
+            <mat-error *ngIf="voorNaamFormControl.hasError('whitespace')">Opgepast!! "SPATIES"
+            </mat-error>
+          </mat-form-field></td>
+        </tr></table>
+        <mat-form-field class="example-full-width" floatLabel="never">
+            <span matPrefix>+32 &nbsp;</span>
+            <input type="text"  matInput placeholder="Tel" id="telContact" name="telContact" maxlength=13 [formControl]="telFormControl"
+            [errorStateMatcher]="matcher"    numbersOnly required>
+            <mat-icon matSuffix>phone</mat-icon>
+            <mat-error *ngIf="telFormControl.hasError('required')">
+              Telefoonnr is <strong>Verplicht</strong>
+            </mat-error>
+            <mat-error *ngIf="telFormControl.hasError('whitespace')">Opgepast!! "SPATIES"
+            </mat-error>
+            <mat-error *ngIf="telFormControl.hasError('smallerdanTen')">10 Cijfers ingeven!!
+            </mat-error>
+          </mat-form-field>
+      
+          <mat-form-field class="example-full-width" floatLabel="never">
+                <input type="email"  matInput placeholder="email" id="emailContact" name="emailContact" [formControl]="emailFormControl"
+                [errorStateMatcher]="matcher"     required>
+                <mat-icon matSuffix>alternate_email</mat-icon>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                  email is <strong>Verplicht</strong>
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('whitespace')">Opgepast!! "SPATIES"
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('email')">ongeldig email structuur (abc@def.ghi) 
+                </mat-error>
+              </mat-form-field>
+  <mat-form-field floatLabel="never">
+        <mat-label>Onderwerp</mat-label>
+        <mat-select [(value)]="selectedOnderwerp" name="onderwerpContact" id="onderwerpContact" [formControle]="onderwerpFormControl"   [errorStateMatcher]="matcher"  required>
+        
+          <mat-option value="Inschrijving" >Inschrijving</mat-option>
+          <mat-option value="Bestelling">Bestelling</mat-option>
+          <mat-option value="Wedstrijd">Wedstrijd</mat-option>
+          <mat-option value="Verzekeing/Ongeval">Verzekeing/Ongeval</mat-option>
+          <mat-option value="Andere">Andere</mat-option>
+        </mat-select>
+        <mat-error *ngIf="onderwerpFormControl.hasError('required')">
+          Kies een <strong>onderwerp</strong>
+        </mat-error>
+        <mat-error *ngIf="onderwerpFormControl.hasError('whitespace')">
+        </mat-error>
+      </mat-form-field>
+     
+
+  <mat-form-field appearance="fill" class="example-full-width">
+    <textarea matInput placeholder="vraag of commentaar " name="commentaarContact" id="commentaarContact" [formControle]="comentaarFormControl"   [errorStateMatcher]="matcher"  required></textarea>
+    <mat-error *ngIf="comentaarFormControl.hasError('required')">
+     Er is geen commentaar of vraag ingegeven.
+    </mat-error>
+    <mat-error *ngIf="comentaarFormControl.hasError('whitespace')">
+    </mat-error>
+  </mat-form-field>
+ 
+      <button mat-raised-button class="example-full-width" (click)="sendContactMail()" type="submit" color="primary">verstuur bericht</button>
+      
+      </form>
+   </div>
+   <br>
+  </div>

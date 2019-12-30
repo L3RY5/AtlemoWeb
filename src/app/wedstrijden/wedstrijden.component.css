@@ -1,0 +1,92 @@
+.wedstrijdDiv{ width: auto;
+    height: auto;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+margin-top: 2em;}
+    .mat-elevation-z8,.mat-paginator{width: 90%;align-self: center;}
+
+    .mat-typography{ height: auto; width: 95%;  font-family: "Times New Roman", Times, serif;margin-top: 2em;}
+    h1{
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 20px;
+    text-align: center;
+}
+mat-cell{
+  
+  width: auto;
+}
+
+h3{
+  
+    font-style: italic;
+	margin-top: 3em;
+	font-size: 14px;
+}
+
+.iconBlack{color:black;font-size:30px;}
+
+.resultdiv{width:100%;height:auto;display:flex;flex-direction:row;}
+.resultIcon{width:2.5em;height:auto;padding-top:0.5em;}
+.resultext{width:40%;height:100%;margin-left:0.5em;padding-top:1em;}
+.formInschrijvingClass{width: 70%;height: auto; display: flex;flex-direction: row;flex-wrap: wrap; justify-content: space-around; margin: 0 auto;}
+.inputHalfLengt{width: 45%; margin-left: 1em;}
+.inputRadioSelect{width: 30%; margin-left: 1em;margin-right: 3em;}
+.inputthity{width: 20%; margin-left: 1em;}
+.formButton{width: 30%;margin:  0 auto ;margin-top: 2em;}
+
+/*media tot 400px*/
+@media screen and (max-width: 400px){
+    .mat-elevation-z8{width: 99%;}
+    mat-cell{font-size : 15px;}
+    
+       }
+       
+       /*media van 401 tot 500px*/
+       @media screen and (min-width: 401px) and (max-width: 500px){
+         .mat-elevation-z8{width: 99%;}
+         mat-cell{font-size : 17px;}
+         
+       }
+       
+       /*media van 501 tot 600px*/
+       @media screen and (min-width: 501px) and (max-width: 600px){
+         .mat-elevation-z8{width: 98%;}
+         mat-cell{font-size : 17px;}
+         
+        }
+       
+       /*media van 601 tot 700px*/
+       @media screen and (min-width: 601px) and (max-width: 700px){
+         .mat-elevation-z8{width: 98%;}
+         mat-cell{font-size : 17px;}
+        
+ 
+       }
+       
+       /*media van 701 tot 800px*/
+       @media screen and (min-width: 701px) and (max-width: 800px){
+         .mat-elevation-z8{width: 97%;}
+         mat-cell{font-size : 17px;}
+       
+       }
+       
+       /*media van 801 tot 1000px*/
+       @media screen and (min-width: 801px) and (max-width: 1000px){
+         .mat-elevation-z8{width: 97%;}
+         mat-cell{font-size : 17px;}
+         
+ 
+       }
+     
+       /*media van 1001 tot 1200px*/
+       @media screen and (min-width: 1001px) and (max-width: 1200px){
+         .mat-elevation-z8{width: 97%;}
+         mat-cell{font-size : 17px;}
+        
+     
+       }
+     
+ 

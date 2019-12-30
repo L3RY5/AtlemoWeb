@@ -1,0 +1,247 @@
+      <mat-horizontal-stepper [linear]="isLinear" #stepper>
+        <mat-step [completed]="step1Completed">
+          <div class="inschrijvingDiv">
+            <form  class="formInschrijvingClass">
+              <ng-template matStepLabel>Inschrijven</ng-template>
+              <mat-form-field class="inputHalfLengt"  >
+                <input matInput placeholder="Naam" id="naamInschrijving" name="naamInschrijving" [formControl]="naamFormControl"
+                  [errorStateMatcher]="matcher"   required >
+                <mat-error *ngIf="naamFormControl.hasError('required')">
+                  Naam is <strong>Verplicht</strong>
+                </mat-error>
+                <mat-error *ngIf="naamFormControl.hasError('whitespace')">Opgepast!! "SPATIES"
+                </mat-error> 
+              </mat-form-field>
+
+              <mat-form-field class="inputHalfLengt">
+                <input matInput placeholder="Voornaam" id="VoornaamInschrijving" name="VoornaamInschrijving" [formControl]="voorNaamFormControl"
+                  [errorStateMatcher]="matcher"     required>
+                <mat-error *ngIf="voorNaamFormControl.hasError('required')">
+                  Voornaam is <strong>Verplicht</strong>
+                </mat-error>
+                <mat-error *ngIf="voorNaamFormControl.hasError('whitespace')">Opgepast!! "SPATIES"
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="inputHalfLengt">
+                <input matInput placeholder="Geboorteplaats" id="geboorteplaatsInschrijving" name="geboorteplaatsInschrijving"
+                  [formControl]="geboortePlaatsFormControl" [errorStateMatcher]="matcher"  required>
+                <mat-error *ngIf="geboortePlaatsFormControl.hasError('required')">
+                  Geboorteplaats is <strong>Verplicht</strong>
+                </mat-error>
+                <mat-error *ngIf="geboortePlaatsFormControl.hasError('whitespace')">Opgepast!! "SPATIES"
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="inputHalfLengt">
+                <input matInput placeholder="Nationaliteit" id="nationaliteitInschrijving" name="nationaliteitInschrijving"
+                  [formControl]="nationaliteitFormControl" [errorStateMatcher]="matcher"  required>
+                <mat-error *ngIf="nationaliteitFormControl.hasError('required')">
+                  Nationaliteit is <strong>Verplicht</strong>
+                </mat-error>
+                <mat-error *ngIf="nationaliteitFormControl.hasError('whitespace')">Opgepast!! "SPATIES"
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field class="inputthity">
+                <input matInput [matDatepicker]="picker" placeholder="Geboortedatum" id="geboortedatumInschrijving"
+                  name="geboortedatumInschrijving"  required > 
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker disabled="false"></mat-datepicker>
+              </mat-form-field>
+
+              <mat-form-field class="inputHalfLengt">
+                <mat-icon matSuffix>alternate_email</mat-icon>
+                <input matInput placeholder="Email" id="emailInschrijving" name="emailInschrijving" [formControl]="emailFormControl"
+                  [errorStateMatcher]="matcher"  required>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                  Email is <strong>Verplicht</strong>
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('whitespace')">Opgepast!! "SPATIES"
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('email')">Gelieve een juiste email in te geven
+                  "abc@def.azzz"
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="inputRadioSelect">
+                <mat-label>Geslacht</mat-label>
+                <mat-select [(value)]="selectedGeslacht" name="geslachtInschrijving" id="geslachtInschrijving" >
+
+                  <mat-option value="Man">Man</mat-option>
+                  <mat-option value="Vrouw">Vrouw</mat-option>
+                </mat-select>
+              </mat-form-field>
+                 <!--{{selectedGeslacht}}-->
+                 <mat-form-field class="inputRadioSelect">
+                <mat-label>Soort Atleet</mat-label>
+                <mat-select [(value)]="selectedAtleet" name="selectedAtleetInschrijving" id="selectedAtleetInschrijving" >
+
+                  <mat-option value="Competitie">Competitie</mat-option>
+                  <mat-option value="recreant">recreant</mat-option>
+                </mat-select>
+              </mat-form-field>
+             
+              <!-- {{selectedAtleet}}-->
+
+
+              <mat-form-field class="inputHalfLengt">
+                <input matInput placeholder="Adress" id="adress" name="adressInschrijving" [formControl]="adressFormControl"
+                  [errorStateMatcher]="matcher"   required>
+                <mat-error *ngIf="adressFormControl.hasError('required')">
+                  Adress is <strong>Verplicht</strong>
+                </mat-error>
+                <mat-error *ngIf="adressFormControl.hasError('whitespace')">Opgepast!! "SPATIES"
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="inputthity">
+                <input matInput placeholder="Nr" id="nrInschrijving" name="nrInschrijving" type="text"[formControl]="nrFormControl"
+                [errorStateMatcher]="matcher"  required numbersOnly>
+                <mat-error *ngIf="nrFormControl.hasError('required')">
+                  Straat nr is <strong>Verplicht</strong>
+                </mat-error>
+                <mat-error *ngIf="nrFormControl.hasError('whitespace')">Opgepast!! "SPATIES"
+                </mat-error>
+               
+
+              </mat-form-field>
+
+              <mat-form-field class="inputthity">
+                <input matInput placeholder="Bus" id="busInschrijving" name="busInschrijving" type="text"numbersOnly >
+              </mat-form-field>
+
+              <mat-form-field class="inputRadioSelect">
+                <input matInput placeholder="Postcode" id="postcodeInschrijving" maxlength=6 name="postcodeInschrijving" type="text"
+                  [formControl]="postcodeFormControl" [errorStateMatcher]="matcher" required numbersOnly>
+                <mat-error *ngIf="postcodeFormControl.hasError('required')">
+                  Postcode is <strong>Verplicht</strong>
+                </mat-error>
+                <mat-error *ngIf="postcodeFormControl.hasError('whitespace')">Opgepast!! "SPATIES"
+                </mat-error>
+                <mat-error *ngIf="postcodeFormControl.hasError('smallerdanfor')">Min 4 Cijfers
+                </mat-error>
+                
+              </mat-form-field>
+
+              <mat-form-field class="inputRadioSelect">
+                <input matInput placeholder="Gemeente" id="gemeenteInschrijving" name="gemeenteInschrijving" type="text"
+                  [formControl]="gemeenteControl" [errorStateMatcher]="matcher" required>
+                <mat-error *ngIf="gemeenteControl.hasError('required')">
+                  Gemeente is <strong>Verplicht</strong>
+                </mat-error>
+                <mat-error *ngIf="gemeenteControl.hasError('whitespace')">Opgepast!! "SPATIES"
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="inputHalfLengt">
+                <span matPrefix>+32 &nbsp;</span>
+                <input type="text" matInput id="tel1Inschrijving" name="tel1Inschrijving" placeholder="Tel1" [formControl]="tel1FormControl"
+                  [errorStateMatcher]="matcher" maxlength=13 required numbersOnly>
+                <mat-icon matSuffix>phone</mat-icon>
+                <mat-error *ngIf="tel1FormControl.hasError('required')">
+                  Telefoonnr is <strong>Verplicht</strong>
+                </mat-error>
+                <mat-error *ngIf="tel1FormControl.hasError('whitespace')">Opgepast!! "SPATIES"
+                </mat-error>
+                <mat-error *ngIf="tel1FormControl.hasError('smallerdanTen')">min 10 cijfers
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field class="inputHalfLengt">
+                <span matPrefix>+32 &nbsp;</span>
+                <input type="text" id="tel2Inschrijving" name="tel2Inschrijving" maxlength=13 matInput placeholder="Tel2" type="text" numbersOnly>
+                <mat-icon matSuffix>phone</mat-icon>
+              </mat-form-field>
+
+              <button mat-raised-button class="formButton" (click)="goForward(stepper)" color="primary"
+                matStepperNext>Inschrijven</button>
+
+
+
+
+
+
+            </form>
+          </div>
+        </mat-step>
+        <mat-step [completed]="step2Completed">
+          <!--  **********************************Medische stepper********************************************** -->
+
+          <ng-template matStepLabel>Medishe Test</ng-template>
+          <div class="MEdisheDive">
+            <div class="medishText">
+              <div class="zwarteAchtergrongMetWitteTekst">
+                <p>Het Preventief sportmedische onderzoek</p>
+              </div>
+              <div class="witteAchterGrondZwateText">
+                <p>een jaarlijks preventief sportmedisch onderzoek is voor het aanvragen van een vergunning bij de
+                  Vlaamse Atletiekliga niet verplicht.*</p>
+              </div>
+              <div class="preventiefKaders">
+                <p class="boldClass">onderzoek wordt evenwel sterk aangeraden bij:</p>
+
+                <ul>
+                  <li>Atleten die met hun sportcarrière beginnen.</li>
+                  <li>Atleten die intensief aan competitieatletiek doen.</li>
+                  <li>Mannelijke atleden ouder dan 40 jaar en vrouwelijke atleten ouder dan 50 jaar.</li>
+                  <li>Atleten met chronishe aandoeningen zoals diabetes, astma, reuma, ...</li>
+                  <li>Atleten waar plotse dood met cardiale oorzaak in de familie voorkomt.</li>
+                </ul>
+
+              </div>
+
+              <div class="preventiefKaders">
+
+                <ul>
+                  <li>Iedereen die al dan niet bij inspanning last heeft van:
+                    <ul>
+                      <li>hartkloppingen: hart bozend, onregtelmatig, erg traag of snel kloppend hart</li>
+                      <li>pijn of beklepping op de borst</li>
+                      <li>duizeligheid of beswustzijnverlies</li>
+                    </ul>
+                  </li>
+
+                  <li>Mensen met 2 of meer cardiovasculaire risicofactoren:
+                    <ul>
+                      <li>roken </li>
+                      <li>hoge bloeddruk </li>
+                      <li> te veel cholesterol</li>
+                      <li>verhoogd bloedsuikergehalte</li>
+                    </ul>
+                  </li>
+                </ul>
+
+              </div>
+
+              <div class="zwarteAchtergrongMetWitteTekst">
+                <p>Contacteer uw huisarts voor meer informatie</p>
+              </div>
+              <br />
+
+            </div>
+            <div class="confirMedish">
+              <div class="gelezenEnBegrepen">
+                <mat-checkbox #checkMe color="primary">Ik heb de bovenstaande tekst over sportmedische onderzoek gelezen
+                  en
+                  begrepen</mat-checkbox>
+              </div>
+              <div class="confirmMedis">
+                <button [disabled]="!checkMe.checked" mat-raised-button      (click)="goForwardMEdish(stepper)" color="primary"
+                  matStepperNext>Volgende</button>
+
+              </div>
+            </div>
+          </div>
+        </mat-step>
+        <mat-step [completed]="step3Completed">
+          <ng-template matStepLabel >confirmatie</ng-template>
+          <div class="confirmDiv">
+              <p>Beste {{naamInschrijving}} dank U voor uw inschrijving, Wij ......</p>
+          
+              <div>
+           
+                <button mat-button  (click)="goForwardConfirm(stepper)">Reset</button>
+              </div>
+          </div>
+          
+        </mat-step>
+      </mat-horizontal-stepper>

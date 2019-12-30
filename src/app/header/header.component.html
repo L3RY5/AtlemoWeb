@@ -1,0 +1,174 @@
+<div class=MainHeaderDive>
+ <div class=navHeaderKlein>
+    <mat-toolbar  class="navbar">
+
+      <div class="testytest3">
+    <div id="testMenu2" class="btn-group mr-3" >
+  <button mat-button class="spanNave" [matMenuTriggerFor]="menuH"><i class="material-icons">
+menu
+</i></button>
+<mat-menu #menuH="matMenu"  class="hamburgerM" yPosition="below" xPosition="before"[overlapTrigger]="true" >
+  <button mat-menu-item class="spanNaveSubmenuH" routerLink="home">Home</button>
+  <button mat-menu-item class="spanNaveSubmenuH" routerLink="algemeneInformatie">AlgemeneInformatie</button>
+  <button mat-menu-item class="spanNaveSubmenuH" routerLink="beleidsplan">Beleidsplan</button>
+  <button mat-menu-item class="spanNaveSubmenuH" routerLink="organisatie">Organisatie</button>
+  <button mat-menu-item class="spanNaveSubmenuH" routerLink="contact">Contact</button>
+  <button mat-menu-item class="spanNaveSubmenuH" routerLink="trainingen">Trainingen</button>
+  <button mat-menu-item class="spanNaveSubmenuH" routerLink="wedstrijden">Wedstrijden</button>
+  <button mat-menu-item class="spanNaveSubmenuH" routerLink="clubrecords">Clubrecords</button>
+  <button mat-menu-item class="spanNaveSubmenuH" routerLink="multimedia">Multimedia</button>
+  <button mat-menu-item class="spanNaveSubmenuH" routerLink="links">Links</button>
+  <button mat-menu-item class="spanNaveSubmenuH" routerLink="inschrijving">Inschrijving</button>
+</mat-menu>
+</div>
+      </div>
+    
+    </mat-toolbar>
+
+
+
+  </div>
+<div class="mainImg">
+  <div class=imgHeader>
+   
+   <ngb-carousel  *ngIf="images" [showNavigationIndicators]="false" >
+    <ng-template  ngbSlide>
+  
+  
+<!-- <img class="headerFoto" [src]="images[0]"  alt="Random third slide">-->
+<picture >
+    <source  media="(min-width: 1440px)" [srcset]="images[8]">
+    <source  media="(min-width: 1200px)" [srcset]="images[8]">
+    <source  media="(min-width: 1000px)" [srcset]="images[7]">
+    <source media="(min-width: 900px)" [srcset]="images[0]">
+    <source media="(min-width: 800px)" [srcset]="images[6]">
+    <source media="(min-width: 700px)" [srcset]="images[6]">
+    <source media="(min-width: 600px)" [srcset]="images[4]">
+    <source media="(min-width: 500px)" [srcset]="images[4]">
+    <source media=" (min-width: 400px)" [srcset]="images[2]">
+    <source media=" (min-width: 300px)" [srcset]="images[1]">
+
+    <img class="headerFoto" [src]="images[0]" />
+  </picture>
+
+      <div class="carousel-caption">
+      
+        <p> <a  class="headerIcon" href="https://www.facebook.com/pages/category/Amateur-Sports-Team/ATLEMO-209947102367668/"target="_blank"> 
+          <mat-icon  svgIcon="Facebook"></mat-icon></a>
+         <a  class="headerIcon" href="https://www.instagram.com/atlemo_foyer/" target="_blank"> 
+            <mat-icon svgIcon="Instagram"></mat-icon></a>
+            <a  class="headerIcon" routerLink="multimedia"> 
+              <mat-icon svgIcon="Foto-album"></mat-icon></a>
+              <br><span class="naamClubDia">Atletiek Vereniging Molenbeek</span>
+              <br><span class="atlemoKorter">ATLEMO</span></p>
+
+       <!--  <h3>No keyboard...</h3>
+      <p>This carousel uses customized default values.</p>
+      -->
+          
+          
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+
+      <picture >
+    <source  media="(min-width: 1440px)" [srcset]="images[17]">
+    <source  media="(min-width: 1200px)" [srcset]="images[17]">
+    <source  media="(min-width: 1000px)" [srcset]="images[16]">
+    <source media="(min-width: 900px)" [srcset]="images[9]">
+    <source media="(min-width: 800px)" [srcset]="images[15]">
+    <source media="(min-width: 700px)" [srcset]="images[15]">
+    <source media="(min-width: 600px)" [srcset]="images[13]">
+    <source media="(min-width: 500px)" [srcset]="images[13]">
+    <source media=" (min-width: 400px)" [srcset]="images[11]">
+    <source media=" (min-width: 300px)" [srcset]="images[10]">
+
+    <img class="headerFoto" [src]="images[9]" />
+  </picture>
+      <div class="carousel-caption">
+        <p> <a  class="headerIcon" href="https://www.facebook.com/pages/category/Amateur-Sports-Team/ATLEMO-209947102367668/" target="_blank" > 
+          <mat-icon  svgIcon="Facebook"></mat-icon></a>
+          <a  class="headerIcon" href="https://www.instagram.com/atlemo_foyer/" target="_blank"> 
+            <mat-icon svgIcon="Instagram"></mat-icon></a>
+            <a  class="headerIcon" routerLink="multimedia"> 
+              <mat-icon svgIcon="Foto-album"></mat-icon></a>
+              <br><span class="naamClubDia">Atletiek Vereniging Molenbeek</span>
+               <br><span class="atlemoKorter">ATLEMO</span></p>
+        
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+     <picture >
+    <source media="(min-width: 1500px)" [srcset]="images[27]">
+    <source media="(min-width: 1000px)" [srcset]="images[26]">
+    <source media="(min-width: 900px)" [srcset]="images[25]">
+    <source media="(min-width: 800px)" [srcset]="images[24]">
+    <source media="(min-width: 700px)" [srcset]="images[23]">
+    <source media="(min-width: 600px)" [srcset]="images[22]">
+    <source media="(min-width: 500px)" [srcset]="images[21]">
+    <source media=" (min-width: 400px)" [srcset]="images[20]">
+    <source media=" (min-width: 300px)" [srcset]="images[19]">
+
+    <img class="headerFoto" [src]="images[18]" />
+    </picture >
+      <div class="carousel-caption">
+        <p> <a  class="headerIcon" href="https://www.facebook.com/pages/category/Amateur-Sports-Team/ATLEMO-209947102367668/" target="_blank"> 
+          <mat-icon  svgIcon="Facebook"></mat-icon></a>
+         <a  class="headerIcon" href="https://www.instagram.com/atlemo_foyer/" target="_blank"> 
+            <mat-icon svgIcon="Instagram"></mat-icon></a>
+            <a  class="headerIcon" routerLink="multimedia"> 
+              <mat-icon svgIcon="Foto-album"></mat-icon></a>
+              <br><span class="naamClubDia">Atletiek Vereniging Molenbeek</span>
+               <br><span class="atlemoKorter">ATLEMO</span></p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+ </div>
+ <!--<div class="imgHeaderLogo">
+<img src="../../assets/img/LogoAtlemoNormaal.jpg" alt="atlemo logo normaal">
+  </div>-->
+  </div>
+  <div class=socialMediaHeader>
+    <a href="http://www.foyer.be/" target="_blank">
+  <img src="../../assets/img/foyer.png" alt="logo Foyer" style="width:70px;height:50px;">
+  </a>
+   <a href="https://www.vgc.be/" target="_blank">
+  <img src="../../assets/img/index.png" alt="logo VGC" style="width:70px;height:50px;"></a>
+   <a href="https://be.brussels/" target="_blank">
+  <img src="../../assets/img/brusselsCap.png" alt="logo Brussel Geweste" style="width:70px;height:50px;"></a>
+   <a href="https://www.trooper.be/Atlemo" target="_blank">
+  <img src="../../assets/img/logo_trooper_small.gif" alt="logo Trooper Atlemo" style="width:70px;height:50px;"></a>
+    
+  </div>
+  <div class=navHeader>
+    <mat-toolbar  class="navbar">
+      <div class="homediv" >
+        <a routerLink="home" >
+          <mat-icon aria-hidden="false" class="iconhome" aria-label="Example home icon">home</mat-icon>
+        </a>
+      </div>
+      <div class="testytest3">
+    <div id="testMenu" class="btn-group mr-3" >
+  <button mat-button class="spanNave" [matMenuTriggerFor]="menu">Club</button>
+<mat-menu #menu="matMenu" class="normaalMenuM" yPosition="below" xPosition="after">
+  <button mat-menu-item class="spanNaveSubmenu" routerLink="algemeneInformatie">AlgemeneInformatie</button>
+  <button mat-menu-item class="spanNaveSubmenu" routerLink="beleidsplan">Beleidsplan</button>
+  <button mat-menu-item class="spanNaveSubmenu" routerLink="organisatie">Organisatie</button>
+  <button mat-menu-item class="spanNaveSubmenu" routerLink="contact">Contact</button>
+  <!--<button mat-menu-item class="spanNaveSubmenu" routerLink="inschrijving">Inschrijving</button>-->
+</mat-menu>
+  <button mat-flat-button  routerLink="trainingen" class="spanNave">Trainingen</button>
+        <button mat-flat-button  routerLink="wedstrijden" class="spanNave">Wedstrijden</button>
+        <button mat-flat-button routerLink="clubrecords"  class="spanNave">Clubrecords</button>
+        <button mat-flat-button routerLink="multimedia"  class="spanNave">Multimedia</button>
+        <button mat-flat-button routerLink="links" class="spanNave">Links</button>
+  
+</div>
+      </div>
+    </mat-toolbar>
+
+
+
+  </div>
+</div>
+

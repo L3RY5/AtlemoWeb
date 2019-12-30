@@ -1,0 +1,15 @@
+ <!--    dit is de dropdown menu zelf -->
+        <mat-menu #appMenu="matMenu">
+          <button  class="submenu" routerLink="algemeneInformatie" mat-menu-item>Algemene Info</button>
+          <button  class="submenu" routerLink="beleidsplan" mat-menu-item>Beleidsplan</button>
+          <button  class="submenu" routerLink="contact" mat-menu-item>Contact</button>
+          <button  class="submenu" routerLink="inschrijving" mat-menu-item>Inschrijving</button>
+        </mat-menu>
+        
+
+<!-- dit is de hoofmenu -->
+        <button mat-flat-button  [matMenuTriggerFor]="appMenu" class="spanNave">Info</button>
+        <button mat-flat-button  routerLink="trainingen" class="spanNave">Trainingenddd</button>
+        <button mat-flat-button  routerLink="wedstrijden" class="spanNave">Wedstrijden</button>
+        <button mat-flat-button routerLink="clubrecords"  class="spanNave">Clubrecords</button>
+        <button mat-flat-button routerLink="links" class="spanNave">Links</button>
