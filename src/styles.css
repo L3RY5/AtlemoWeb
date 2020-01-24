@@ -71,7 +71,7 @@
 .hamburgerM{
   background-color: rgb(51, 37, 241);
   margin-left: -15px;
-  width: 500px;
+  width: 600px;
 }
 .normaalMenuM{
   background-color: rgb(51, 37, 241);
@@ -159,14 +159,14 @@ body{
         .footerDive{margin-top: 1em;}
 
 }
-.spanNave{
+/*.spanNave{
     padding-right: 0px;
     
     color:white;
     width: auto;
     font-size: 0.7rem;
 
-}
+}*/
 /*media tot 500px*/
 @media screen and (max-width: 500px){
     #testMenu{display:none;}
@@ -182,7 +182,18 @@ body{
          
          display: block;
       }
-
+       .bodyPageDive{
+            padding: 0%;
+            padding-left:0.5%;
+        }
+      .spanNave{
+        padding-right: 0px;
+        
+        color:white;
+        width: auto;
+        font-size: 0.7rem;
+    
+    }
     
 }
 
@@ -201,7 +212,19 @@ width: 100%;
 
 .footerDive{margin-top: 1em;}
 }
+.navHeaderKlein{
+    /*   border: black ridge; */
+     
+     display: block;
+  }
+  .spanNave{
+    padding-right: 0px;
+    
+    color:white;
+    width: auto;
+    font-size: 0.7rem;
 
+}
 /*media van 501 tot 600px*/
 @media screen and (min-width: 501px) and (max-width: 600px){
     .bodybody{
