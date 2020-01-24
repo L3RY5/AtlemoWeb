@@ -33,20 +33,20 @@ export interface wedstrijdZomer {
 }
 
 const WEDSTRRIID_WINTER: VeldLoopJongeren[] = [
-  {datum: '14/9/2019',club:"Joggin Foyer",categorieen:'Allen', adres: 'Rue des Ateliers 25,1080 Molenbeek', eersteStart: "12:00h",samenKomst:"Rue des Ateliers 25, 1080 Molenbeek"},
+  {datum: '14/9/2019',club:"Jogging Foyer",categorieen:'Allen', adres: 'Rue des Ateliers 25,1080 Molenbeek', eersteStart: "12:00h",samenKomst:"Rue des Ateliers 25, 1080 Molenbeek"},
   {datum: '19/10/2019',club:"Ekiden",categorieen:'Allen', adres: 'Koning Boudewijnstadion', eersteStart: "13:00h",samenKomst:"Koning Boudewijnstadion"},
   {datum: '27/10/2019',club:"Crosscup Relays Berlare",categorieen:'Alle', adres: 'Dendermondsesteenweg 13a, 9290 Berlare', eersteStart: "    :  h",samenKomst:"Mahatma Gandhilaan 5,1080 Molenbeek"},
   {datum: '03/11/2019',club:"Cross Leuven",categorieen:'Allen', adres: 'Diestseseteenweg 272, 3010 Kessen-Lo', eersteStart: "  :  h",samenKomst:"Mahatma Gandhilaan 5,1080 Molenbeek"},
   {datum: '09/11/2019',club:"Cross 44ste grote prijs Gaston Reiff ",categorieen:'Pup/Min/Kad/Sch', adres: 'avenue Alphonse Allard - 1420 Braine-l Alleud', eersteStart: "  :  h",samenKomst:"Mahatma Gandhilaan 5,1080 Molenbeek"},
-  {datum: '11/11/2019',club:"Vredesjogging ",categorieen:'Pup/Min/Kad/Sch', adres: 'Sportcomplex Sint-Agatha-Berchem', eersteStart: "  :  h",samenKomst:"Mahatma Gandhilaan 5,1080 Molenbeek"},
-  {datum: '17/11/2019',club:"67ste Grote Prijzen ",categorieen:'Pup/Min/Kad/Sch', adres: 'Rooienberg 56, 2570 Duffel', eersteStart: "12:00h",samenKomst:"Mahatma Gandhilaan 5,1080 Molenbeek"},
+  {datum: '11/11/2019',club:"Vredesjogging",categorieen:'Pup/Min/Kad/Sch', adres: 'Sportcomplex Sint-Agatha-Berchem', eersteStart: "  :  h",samenKomst:"Mahatma Gandhilaan 5,1080 Molenbeek"},
+  {datum: '17/11/2019',club:"67ste Grote Prijzen",categorieen:'Pup/Min/Kad/Sch', adres: 'Rooienberg 56, 2570 Duffel', eersteStart: "12:00h",samenKomst:"Mahatma Gandhilaan 5,1080 Molenbeek"},
   {datum: '23/11/2019',club:"46ste Sparta Cross",categorieen:'Pup/Min/Kad/Sch', adres: 'Domein 3 Fonteinen, Beneluxlaan 44 - 1800 Vilvoorde', eersteStart: ": h",samenKomst:"Mahatma Gandhilaan 5,1080 Molenbeek"},
   {datum: '14/12/2019',club:"Indoor ",categorieen:'Kad/Sch', adres: '', eersteStart: ":h",samenKomst:"Mahatma Gandhilaan 5,1080 Molenbeek"},
   {datum: '05/01/2020',club:"Cross 47ste DAMES- en HERENVELDLOOP",categorieen:'Pup/Min/Kad/Sch', adres: 'Prinsenbos - Pastoor Wouterstraat - 1050 Grimbergen', eersteStart: ":h",samenKomst:"Mahatma Gandhilaan 5,1080 Molenbeek"},
-  {datum: '12/01/2020',club:"Kampionschap van Brussel",categorieen:'Pup/Min/Kad/Sch', adres: 'Stade Fallon, Woluwe', eersteStart: ":h",samenKomst:"Mahatma Gandhilaan 5,1080 Molenbeek"},
-  {datum: '26/01/2020',club:"Cross Gote Prijs Electo 80",categorieen:'Pup/Min/Kad/Sch', adres: 'Stade Fallon, Woluwe', eersteStart: ":h",samenKomst:"Mahatma Gandhilaan 5,1080 Molenbeek"},
-  {datum: '23/02/2020',club:"Cross BK ",categorieen:'Allen', adres: 'Park van Laken, Jules Praetlaan - 1020 Laken', eersteStart: ":h",samenKomst:"Mahatma Gandhilaan 5,1080 Molenbeek"},
-  
+  {datum: '12/01/2020',club:"Kampioenschap van Brussel",categorieen:'Pup/Min/Kad/Sch', adres: 'Stade Fallon, Woluwe', eersteStart: ":h",samenKomst:"Mahatma Gandhilaan 5,1080 Molenbeek"},
+  {datum: '26/01/2020',club:"Cross Grote Prijs Electro 80",categorieen:'Pup/Min/Kad/Sch', adres: 'Domein 3 Fonteinen, Beneluxlaan 44 - 1800 Vilvoorde', eersteStart: ":h",samenKomst:"Mahatma Gandhilaan 5,1080 Molenbeek"},
+  {datum: '23/02/2020',club:"Cross BK",categorieen:'Allen', adres: 'Park van Laken, Jules Praetlaan - 1020 Laken', eersteStart: ":h",samenKomst:"Mahatma Gandhilaan 5,1080 Molenbeek"},
+
 ];
 
 const WEDSTRRIID_ZOMER: wedstrijdZomer[] = [
@@ -96,15 +96,15 @@ export class WedstrijdenComponent implements OnInit {
   @ViewChildren(MatPaginator) paginator = new QueryList<MatPaginator>();
   displayedColumns: string[] = ['datum', 'club','categorieen','adres', 'eersteStart','samenKomst'];
   displayedZomer: string[] = ['wedstrindINfo', 'samenkomst','benPup', 'min','kadSchol','jun','sen','mas'];
- 
+
 
   naamFormControl = new FormControl('', [Validators.required,
     this.noWhitespaceValidator,
-  
+
   ]);
   voorNaamFormControl = new FormControl('', [Validators.required,
     this.noWhitespaceValidator,
-   
+
   ]);
   geboorteJaarControl = new FormControl('', [Validators.required,
     this.noWhitespaceValidator,this.MinFourLetters
@@ -126,7 +126,7 @@ export class WedstrijdenComponent implements OnInit {
   ]);
 
 
-  
+
 
   matcher = new MyErrorStateMatcher();
   constructor(private _adapter: DateAdapter < any > ,private _snackBar: MatSnackBar) {
