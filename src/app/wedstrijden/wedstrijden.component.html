@@ -6,8 +6,8 @@
                                 <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
                               </mat-form-field>
       <diV class="wedstrijdDiv">
-               
-                              
+
+
         <mat-table [dataSource]="dataSourceWinter" class="mat-elevation-z8">
           <!-- Position Column -->
           <ng-container matColumnDef="datum">
@@ -44,12 +44,12 @@
 
           <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
           <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-          
+
         </mat-table>
-       
+
         <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
       </diV>
-     
+
 
     </mat-tab>
     <!-- einde winter tab -->
@@ -57,11 +57,11 @@
 
     <!-- begin Zomer tab -->
 
-    <mat-tab label="Zomer"> 
+    <mat-tab label="Zomer">
       <mat-form-field>
                                 <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
                               </mat-form-field>
-                                          <div class="wedstrijdDiv">   
+                                          <div class="wedstrijdDiv">
         <mat-table [dataSource]="dataSourceZomer" class="mat-elevation-z8">
           <!-- Position Column -->
           <ng-container matColumnDef="wedstrindINfo">
@@ -106,9 +106,9 @@
 
           <mat-header-row *matHeaderRowDef="displayedZomer"></mat-header-row>
           <mat-row *matRowDef="let row; columns: displayedZomer;"></mat-row>
-          
+
         </mat-table>
-       
+
         <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
    </div>
     </mat-tab>
@@ -179,7 +179,7 @@ Memorial Vertommen-Cuddy</p></div>
 
 </div>
     </mat-tab>
-    <!--<mat-tab label="inschrijven"> 
+    <!--<mat-tab label="inschrijven">
       <div class="inschrijvingDiv">
         <form   class="formInschrijvingClass">
           <mat-form-field class="inputHalfLengt">
@@ -204,7 +204,7 @@ Memorial Vertommen-Cuddy</p></div>
 
           <mat-form-field class="inputthity">
              <input matInput [matDatepicker]="picker" placeholder="Geboortedatum" id="geboortedatumInschrijving"
-                  name="geboortedatumInschrijving"  required > 
+                  name="geboortedatumInschrijving"  required >
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker disabled="false"></mat-datepicker>
           </mat-form-field>
@@ -222,7 +222,7 @@ Memorial Vertommen-Cuddy</p></div>
             <mat-form-field class="inputthity">
               <input matInput placeholder="Borstnr" id="borstnr" name="borstnr"
                 [errorStateMatcher]="matcher"   #borstnr  type="text" numbersOnly required>
-              
+
             </mat-form-field>
 
           <mat-form-field class="inputRadioSelect">
@@ -243,7 +243,7 @@ Memorial Vertommen-Cuddy</p></div>
               <mat-error *ngIf="locatieFormControl.hasError('whitespace')">Opgepast!! "SPATIES"
               </mat-error>
           </mat-form-field>
-          
+
           <button mat-raised-button class="formButton" type="submit"(click)="wedstrijdInschrijving()"  color="primary">Inschrijven</button>
 
         </form>

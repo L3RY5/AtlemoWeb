@@ -105,7 +105,7 @@
           <mat-expansion-panel>
             <mat-expansion-panel-header>
               <mat-panel-title>
-                  PUPILLEN 
+                  PUPILLEN
               </mat-panel-title>
               <mat-panel-description>
                 MEISJES
@@ -203,20 +203,20 @@
            <mat-expansion-panel>
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                    MINIEMEN  
+                    MINIEMEN
                 </mat-panel-title>
                 <mat-panel-description>
                   MEISJES
                 </mat-panel-description>
               </mat-expansion-panel-header>
-  
+
               <mat-table [dataSource]="dataSourceMinM" class="mat-elevation-z8">
                 <!-- Position Column -->
                 <ng-container matColumnDef="discipline">
                   <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                 </ng-container>
-  
+
                 <!-- Name Column -->
                 <ng-container matColumnDef="naam">
                   <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -227,7 +227,7 @@
                   <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                 </ng-container>
-  
+
                 <!-- Weight Column -->
                 <ng-container matColumnDef="plaats">
                   <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -237,23 +237,23 @@
                   <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                 </ng-container>
-  
-  
-  
+
+
+
                 <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                 <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-  
+
               </mat-table>
-  
+
               <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
             </mat-expansion-panel>
-  
+
             <!--*********************************Begin  expension voor MINIEMEN  Jongens************************************************** -->
-  
+
             <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                    MINIEMEN 
+                    MINIEMEN
                 </mat-panel-title>
                 <mat-panel-description>
                   JONGENS
@@ -265,7 +265,7 @@
                   <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                 </ng-container>
-  
+
                 <!-- Name Column -->
                 <ng-container matColumnDef="naam">
                   <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -276,7 +276,7 @@
                   <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                 </ng-container>
-  
+
                 <!-- Weight Column -->
                 <ng-container matColumnDef="plaats">
                   <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -286,14 +286,14 @@
                   <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                 </ng-container>
-  
-  
-  
+
+
+
                 <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                 <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-  
+
               </mat-table>
-  
+
               <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
             </mat-expansion-panel>
 
@@ -301,20 +301,20 @@
            <mat-expansion-panel>
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                    KADETTEN   
+                    KADETTEN
                 </mat-panel-title>
                 <mat-panel-description>
                   DAMES
                 </mat-panel-description>
               </mat-expansion-panel-header>
-  
+
               <mat-table [dataSource]="dataSourceKadD" class="mat-elevation-z8">
                 <!-- Position Column -->
                 <ng-container matColumnDef="discipline">
                   <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                 </ng-container>
-  
+
                 <!-- Name Column -->
                 <ng-container matColumnDef="naam">
                   <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -325,7 +325,7 @@
                   <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                 </ng-container>
-  
+
                 <!-- Weight Column -->
                 <ng-container matColumnDef="plaats">
                   <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -335,23 +335,23 @@
                   <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                 </ng-container>
-  
-  
-  
+
+
+
                 <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                 <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-  
+
               </mat-table>
-  
+
               <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
             </mat-expansion-panel>
-  
+
             <!--*********************************Begin  expension voor KADETTEN   Heren************************************************** -->
-  
+
             <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                    KADETTEN  
+                    KADETTEN
                 </mat-panel-title>
                 <mat-panel-description>
                   HEREN
@@ -363,7 +363,7 @@
                   <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                 </ng-container>
-  
+
                 <!-- Name Column -->
                 <ng-container matColumnDef="naam">
                   <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -374,7 +374,7 @@
                   <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                 </ng-container>
-  
+
                 <!-- Weight Column -->
                 <ng-container matColumnDef="plaats">
                   <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -384,14 +384,14 @@
                   <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                 </ng-container>
-  
-  
-  
+
+
+
                 <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                 <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-  
+
               </mat-table>
-  
+
               <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
             </mat-expansion-panel>
 
@@ -399,20 +399,20 @@
            <mat-expansion-panel>
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                    SCHOLIEREN    
+                    SCHOLIEREN
                 </mat-panel-title>
                 <mat-panel-description>
                   DAMES
                 </mat-panel-description>
               </mat-expansion-panel-header>
-  
+
               <mat-table [dataSource]="dataSourceSchD" class="mat-elevation-z8">
                 <!-- Position Column -->
                 <ng-container matColumnDef="discipline">
                   <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                 </ng-container>
-  
+
                 <!-- Name Column -->
                 <ng-container matColumnDef="naam">
                   <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -423,7 +423,7 @@
                   <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                 </ng-container>
-  
+
                 <!-- Weight Column -->
                 <ng-container matColumnDef="plaats">
                   <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -433,23 +433,23 @@
                   <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                 </ng-container>
-  
-  
-  
+
+
+
                 <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                 <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-  
+
               </mat-table>
-  
+
               <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
             </mat-expansion-panel>
-  
+
             <!--*********************************Begin  expension voor SCHOLIEREN  Heren************************************************** -->
-  
+
             <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                    SCHOLIEREN   
+                    SCHOLIEREN
                 </mat-panel-title>
                 <mat-panel-description>
                   HEREN
@@ -461,7 +461,7 @@
                   <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                 </ng-container>
-  
+
                 <!-- Name Column -->
                 <ng-container matColumnDef="naam">
                   <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -472,7 +472,7 @@
                   <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                 </ng-container>
-  
+
                 <!-- Weight Column -->
                 <ng-container matColumnDef="plaats">
                   <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -482,14 +482,14 @@
                   <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                 </ng-container>
-  
-  
-  
+
+
+
                 <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                 <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-  
+
               </mat-table>
-  
+
               <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
             </mat-expansion-panel>
 
@@ -497,20 +497,20 @@
            <mat-expansion-panel>
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                    JUNIORS     
+                    JUNIORS
                 </mat-panel-title>
                 <mat-panel-description>
                   DAMES
                 </mat-panel-description>
               </mat-expansion-panel-header>
-  
+
               <mat-table [dataSource]="dataSourceJunD" class="mat-elevation-z8">
                 <!-- Position Column -->
                 <ng-container matColumnDef="discipline">
                   <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                 </ng-container>
-  
+
                 <!-- Name Column -->
                 <ng-container matColumnDef="naam">
                   <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -521,7 +521,7 @@
                   <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                 </ng-container>
-  
+
                 <!-- Weight Column -->
                 <ng-container matColumnDef="plaats">
                   <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -531,23 +531,23 @@
                   <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                 </ng-container>
-  
-  
-  
+
+
+
                 <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                 <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-  
+
               </mat-table>
-  
+
               <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
             </mat-expansion-panel>
-  
+
             <!--*********************************Begin  expension voor JUNIORS   Heren************************************************** -->
-  
+
             <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                    JUNIORS    
+                    JUNIORS
                 </mat-panel-title>
                 <mat-panel-description>
                   HEREN
@@ -559,7 +559,7 @@
                   <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                 </ng-container>
-  
+
                 <!-- Name Column -->
                 <ng-container matColumnDef="naam">
                   <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -570,7 +570,7 @@
                   <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                 </ng-container>
-  
+
                 <!-- Weight Column -->
                 <ng-container matColumnDef="plaats">
                   <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -580,14 +580,14 @@
                   <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                 </ng-container>
-  
-  
-  
+
+
+
                 <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                 <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-  
+
               </mat-table>
-  
+
               <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
             </mat-expansion-panel>
 
@@ -595,20 +595,20 @@
            <mat-expansion-panel>
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                    SENIORS      
+                    SENIORS
                 </mat-panel-title>
                 <mat-panel-description>
                   DAMES
                 </mat-panel-description>
               </mat-expansion-panel-header>
-  
+
               <mat-table [dataSource]="dataSourceSenD" class="mat-elevation-z8">
                 <!-- Position Column -->
                 <ng-container matColumnDef="discipline">
                   <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                 </ng-container>
-  
+
                 <!-- Name Column -->
                 <ng-container matColumnDef="naam">
                   <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -619,7 +619,7 @@
                   <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                 </ng-container>
-  
+
                 <!-- Weight Column -->
                 <ng-container matColumnDef="plaats">
                   <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -629,23 +629,23 @@
                   <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                 </ng-container>
-  
-  
-  
+
+
+
                 <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                 <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-  
+
               </mat-table>
-  
+
               <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
             </mat-expansion-panel>
-  
+
             <!--*********************************Begin  expension voor SENIORS    Heren************************************************** -->
-  
+
             <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                    SENIORS     
+                    SENIORS
                 </mat-panel-title>
                 <mat-panel-description>
                   HEREN
@@ -657,7 +657,7 @@
                   <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                 </ng-container>
-  
+
                 <!-- Name Column -->
                 <ng-container matColumnDef="naam">
                   <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -668,7 +668,7 @@
                   <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                 </ng-container>
-  
+
                 <!-- Weight Column -->
                 <ng-container matColumnDef="plaats">
                   <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -678,14 +678,14 @@
                   <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                 </ng-container>
-  
-  
-  
+
+
+
                 <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                 <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-  
+
               </mat-table>
-  
+
               <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
             </mat-expansion-panel>
 
@@ -693,20 +693,20 @@
            <mat-expansion-panel>
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                    MASTERS       
+                    MASTERS
                 </mat-panel-title>
                 <mat-panel-description>
                   DAMES
                 </mat-panel-description>
               </mat-expansion-panel-header>
-  
+
               <mat-table [dataSource]="dataSourceMasD" class="mat-elevation-z8">
                 <!-- Position Column -->
                 <ng-container matColumnDef="discipline">
                   <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                 </ng-container>
-  
+
                 <!-- Name Column -->
                 <ng-container matColumnDef="naam">
                   <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -717,7 +717,7 @@
                   <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                 </ng-container>
-  
+
                 <!-- Weight Column -->
                 <ng-container matColumnDef="plaats">
                   <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -727,23 +727,23 @@
                   <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                 </ng-container>
-  
-  
-  
+
+
+
                 <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                 <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-  
+
               </mat-table>
-  
+
               <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
             </mat-expansion-panel>
-  
+
             <!--*********************************Begin  expension voor MASTERS     Heren************************************************** -->
-  
+
             <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                    MASTERS      
+                    MASTERS
                 </mat-panel-title>
                 <mat-panel-description>
                   HEREN
@@ -755,7 +755,7 @@
                   <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                 </ng-container>
-  
+
                 <!-- Name Column -->
                 <ng-container matColumnDef="naam">
                   <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -766,7 +766,7 @@
                   <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                 </ng-container>
-  
+
                 <!-- Weight Column -->
                 <ng-container matColumnDef="plaats">
                   <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -776,14 +776,14 @@
                   <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                   <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                 </ng-container>
-  
-  
-  
+
+
+
                 <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                 <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-  
+
               </mat-table>
-  
+
               <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
             </mat-expansion-panel>
         </mat-accordion>
@@ -794,7 +794,7 @@
 
 
     <!-- einde  outdoor  clubrecord -->
-    <mat-tab label="indoor"> 
+    <mat-tab label="Indoor">
         <div class="recordsDiv">
             <mat-accordion>
               <!--*********************************Begin  expension voor BEN Meisjes************************************************** -->
@@ -807,14 +807,14 @@
                     MEISJES
                   </mat-panel-description>
                 </mat-expansion-panel-header>
-    
+
                 <mat-table [dataSource]="dataSourceBenMind" class="mat-elevation-z8">
                   <!-- Position Column -->
                   <ng-container matColumnDef="discipline">
                     <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                     <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                   </ng-container>
-    
+
                   <!-- Name Column -->
                   <ng-container matColumnDef="naam">
                     <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -825,7 +825,7 @@
                     <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                     <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                   </ng-container>
-    
+
                   <!-- Weight Column -->
                   <ng-container matColumnDef="plaats">
                     <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -835,19 +835,19 @@
                     <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                     <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                   </ng-container>
-    
-    
-    
+
+
+
                   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                   <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-    
+
                 </mat-table>
-    
+
                 <mat-paginator  [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
               </mat-expansion-panel>
-    
+
               <!--*********************************Begin  expension voor BEN Jongens************************************************** -->
-    
+
               <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
                 <mat-expansion-panel-header>
                   <mat-panel-title>
@@ -863,7 +863,7 @@
                     <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                     <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                   </ng-container>
-    
+
                   <!-- Name Column -->
                   <ng-container matColumnDef="naam">
                     <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -874,7 +874,7 @@
                     <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                     <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                   </ng-container>
-    
+
                   <!-- Weight Column -->
                   <ng-container matColumnDef="plaats">
                     <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -884,35 +884,35 @@
                     <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                     <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                   </ng-container>
-    
-    
-    
+
+
+
                   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                   <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-    
+
                 </mat-table>
-    
+
                 <mat-paginator  [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
               </mat-expansion-panel>
-    
+
               <!--*********************************Begin  expension voor PUPILLEN  Meisjes************************************************** -->
               <mat-expansion-panel>
                 <mat-expansion-panel-header>
                   <mat-panel-title>
-                      PUPILLEN 
+                      PUPILLEN
                   </mat-panel-title>
                   <mat-panel-description>
                     MEISJES
                   </mat-panel-description>
                 </mat-expansion-panel-header>
-    
+
                 <mat-table [dataSource]="dataSourcePupMind" class="mat-elevation-z8">
                   <!-- Position Column -->
                   <ng-container matColumnDef="discipline">
                     <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                     <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                   </ng-container>
-    
+
                   <!-- Name Column -->
                   <ng-container matColumnDef="naam">
                     <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -923,7 +923,7 @@
                     <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                     <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                   </ng-container>
-    
+
                   <!-- Weight Column -->
                   <ng-container matColumnDef="plaats">
                     <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -933,19 +933,19 @@
                     <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                     <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                   </ng-container>
-    
-    
-    
+
+
+
                   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                   <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-    
+
                 </mat-table>
-    
+
                 <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
               </mat-expansion-panel>
-    
+
               <!--*********************************Begin  expension voor PUPILLEN Jongens************************************************** -->
-    
+
               <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
                 <mat-expansion-panel-header>
                   <mat-panel-title>
@@ -961,7 +961,7 @@
                     <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                     <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                   </ng-container>
-    
+
                   <!-- Name Column -->
                   <ng-container matColumnDef="naam">
                     <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -972,7 +972,7 @@
                     <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                     <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                   </ng-container>
-    
+
                   <!-- Weight Column -->
                   <ng-container matColumnDef="plaats">
                     <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -982,35 +982,35 @@
                     <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                     <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                   </ng-container>
-    
-    
-    
+
+
+
                   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                   <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-    
+
                 </mat-table>
-    
+
                 <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
               </mat-expansion-panel>
-    
+
                <!--*********************************Begin  expension voor MINIEMEN   Meisjes************************************************** -->
                <mat-expansion-panel>
                   <mat-expansion-panel-header>
                     <mat-panel-title>
-                        MINIEMEN  
+                        MINIEMEN
                     </mat-panel-title>
                     <mat-panel-description>
                       MEISJES
                     </mat-panel-description>
                   </mat-expansion-panel-header>
-      
+
                   <mat-table [dataSource]="dataSourceMinMind" class="mat-elevation-z8">
                     <!-- Position Column -->
                     <ng-container matColumnDef="discipline">
                       <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                     </ng-container>
-      
+
                     <!-- Name Column -->
                     <ng-container matColumnDef="naam">
                       <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -1021,7 +1021,7 @@
                       <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                     </ng-container>
-      
+
                     <!-- Weight Column -->
                     <ng-container matColumnDef="plaats">
                       <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -1031,23 +1031,23 @@
                       <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                     </ng-container>
-      
-      
-      
+
+
+
                     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-      
+
                   </mat-table>
-      
+
                   <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
                 </mat-expansion-panel>
-      
+
                 <!--*********************************Begin  expension voor MINIEMEN  Jongens************************************************** -->
-      
+
                 <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
                   <mat-expansion-panel-header>
                     <mat-panel-title>
-                        MINIEMEN 
+                        MINIEMEN
                     </mat-panel-title>
                     <mat-panel-description>
                       JONGENS
@@ -1059,7 +1059,7 @@
                       <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                     </ng-container>
-      
+
                     <!-- Name Column -->
                     <ng-container matColumnDef="naam">
                       <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -1070,7 +1070,7 @@
                       <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                     </ng-container>
-      
+
                     <!-- Weight Column -->
                     <ng-container matColumnDef="plaats">
                       <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -1080,35 +1080,35 @@
                       <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                     </ng-container>
-      
-      
-      
+
+
+
                     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-      
+
                   </mat-table>
-      
+
                   <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
                 </mat-expansion-panel>
-    
+
                   <!--*********************************Begin  expension voor KADETTEN    Dames************************************************** -->
                <mat-expansion-panel>
                   <mat-expansion-panel-header>
                     <mat-panel-title>
-                        KADETTEN   
+                        KADETTEN
                     </mat-panel-title>
                     <mat-panel-description>
                       DAMES
                     </mat-panel-description>
                   </mat-expansion-panel-header>
-      
+
                   <mat-table [dataSource]="dataSourceKadDind" class="mat-elevation-z8">
                     <!-- Position Column -->
                     <ng-container matColumnDef="discipline">
                       <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                     </ng-container>
-      
+
                     <!-- Name Column -->
                     <ng-container matColumnDef="naam">
                       <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -1119,7 +1119,7 @@
                       <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                     </ng-container>
-      
+
                     <!-- Weight Column -->
                     <ng-container matColumnDef="plaats">
                       <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -1129,23 +1129,23 @@
                       <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                     </ng-container>
-      
-      
-      
+
+
+
                     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-      
+
                   </mat-table>
-      
+
                   <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
                 </mat-expansion-panel>
-      
+
                 <!--*********************************Begin  expension voor KADETTEN   Heren************************************************** -->
-      
+
                 <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
                   <mat-expansion-panel-header>
                     <mat-panel-title>
-                        KADETTEN  
+                        KADETTEN
                     </mat-panel-title>
                     <mat-panel-description>
                       HEREN
@@ -1157,7 +1157,7 @@
                       <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                     </ng-container>
-      
+
                     <!-- Name Column -->
                     <ng-container matColumnDef="naam">
                       <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -1168,7 +1168,7 @@
                       <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                     </ng-container>
-      
+
                     <!-- Weight Column -->
                     <ng-container matColumnDef="plaats">
                       <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -1178,35 +1178,35 @@
                       <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                     </ng-container>
-      
-      
-      
+
+
+
                     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-      
+
                   </mat-table>
-      
+
                   <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
                 </mat-expansion-panel>
-    
+
                 <!--*********************************Begin  expension voor SCHOLIEREN  Dames************************************************** -->
                <mat-expansion-panel>
                   <mat-expansion-panel-header>
                     <mat-panel-title>
-                        SCHOLIEREN    
+                        SCHOLIEREN
                     </mat-panel-title>
                     <mat-panel-description>
                       DAMES
                     </mat-panel-description>
                   </mat-expansion-panel-header>
-      
+
                   <mat-table [dataSource]="dataSourceSchDind" class="mat-elevation-z8">
                     <!-- Position Column -->
                     <ng-container matColumnDef="discipline">
                       <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                     </ng-container>
-      
+
                     <!-- Name Column -->
                     <ng-container matColumnDef="naam">
                       <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -1217,7 +1217,7 @@
                       <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                     </ng-container>
-      
+
                     <!-- Weight Column -->
                     <ng-container matColumnDef="plaats">
                       <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -1227,23 +1227,23 @@
                       <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                     </ng-container>
-      
-      
-      
+
+
+
                     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-      
+
                   </mat-table>
-      
+
                   <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
                 </mat-expansion-panel>
-      
+
                 <!--*********************************Begin  expension voor SCHOLIEREN  Heren************************************************** -->
-      
+
                 <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
                   <mat-expansion-panel-header>
                     <mat-panel-title>
-                        SCHOLIEREN   
+                        SCHOLIEREN
                     </mat-panel-title>
                     <mat-panel-description>
                       HEREN
@@ -1255,7 +1255,7 @@
                       <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                     </ng-container>
-      
+
                     <!-- Name Column -->
                     <ng-container matColumnDef="naam">
                       <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -1266,7 +1266,7 @@
                       <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                     </ng-container>
-      
+
                     <!-- Weight Column -->
                     <ng-container matColumnDef="plaats">
                       <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -1276,35 +1276,35 @@
                       <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                     </ng-container>
-      
-      
-      
+
+
+
                     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-      
+
                   </mat-table>
-      
+
                   <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
                 </mat-expansion-panel>
-    
+
                 <!--*********************************Begin  expension voor JUNIORS   Dames************************************************** -->
                <mat-expansion-panel>
                   <mat-expansion-panel-header>
                     <mat-panel-title>
-                        JUNIORS     
+                        JUNIORS
                     </mat-panel-title>
                     <mat-panel-description>
                       DAMES
                     </mat-panel-description>
                   </mat-expansion-panel-header>
-      
+
                   <mat-table [dataSource]="dataSourceJunDind" class="mat-elevation-z8">
                     <!-- Position Column -->
                     <ng-container matColumnDef="discipline">
                       <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                     </ng-container>
-      
+
                     <!-- Name Column -->
                     <ng-container matColumnDef="naam">
                       <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -1315,7 +1315,7 @@
                       <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                     </ng-container>
-      
+
                     <!-- Weight Column -->
                     <ng-container matColumnDef="plaats">
                       <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -1325,23 +1325,23 @@
                       <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                     </ng-container>
-      
-      
-      
+
+
+
                     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-      
+
                   </mat-table>
-      
+
                   <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
                 </mat-expansion-panel>
-      
+
                 <!--*********************************Begin  expension voor JUNIORS   Heren************************************************** -->
-      
+
                 <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
                   <mat-expansion-panel-header>
                     <mat-panel-title>
-                        JUNIORS    
+                        JUNIORS
                     </mat-panel-title>
                     <mat-panel-description>
                       HEREN
@@ -1353,7 +1353,7 @@
                       <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                     </ng-container>
-      
+
                     <!-- Name Column -->
                     <ng-container matColumnDef="naam">
                       <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -1364,7 +1364,7 @@
                       <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                     </ng-container>
-      
+
                     <!-- Weight Column -->
                     <ng-container matColumnDef="plaats">
                       <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -1374,35 +1374,35 @@
                       <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                     </ng-container>
-      
-      
-      
+
+
+
                     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-      
+
                   </mat-table>
-      
+
                   <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
                 </mat-expansion-panel>
-    
+
                  <!--*********************************Begin  expension voor SENIORS    Dames************************************************** -->
                <mat-expansion-panel>
                   <mat-expansion-panel-header>
                     <mat-panel-title>
-                        SENIORS      
+                        SENIORS
                     </mat-panel-title>
                     <mat-panel-description>
                       DAMES
                     </mat-panel-description>
                   </mat-expansion-panel-header>
-      
+
                   <mat-table [dataSource]="dataSourceSenDind" class="mat-elevation-z8">
                     <!-- Position Column -->
                     <ng-container matColumnDef="discipline">
                       <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                     </ng-container>
-      
+
                     <!-- Name Column -->
                     <ng-container matColumnDef="naam">
                       <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -1413,7 +1413,7 @@
                       <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                     </ng-container>
-      
+
                     <!-- Weight Column -->
                     <ng-container matColumnDef="plaats">
                       <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -1423,23 +1423,23 @@
                       <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                     </ng-container>
-      
-      
-      
+
+
+
                     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-      
+
                   </mat-table>
-      
+
                   <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
                 </mat-expansion-panel>
-      
+
                 <!--*********************************Begin  expension voor SENIORS    Heren************************************************** -->
-      
+
                 <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
                   <mat-expansion-panel-header>
                     <mat-panel-title>
-                        SENIORS     
+                        SENIORS
                     </mat-panel-title>
                     <mat-panel-description>
                       HEREN
@@ -1451,7 +1451,7 @@
                       <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                     </ng-container>
-      
+
                     <!-- Name Column -->
                     <ng-container matColumnDef="naam">
                       <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -1462,7 +1462,7 @@
                       <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                     </ng-container>
-      
+
                     <!-- Weight Column -->
                     <ng-container matColumnDef="plaats">
                       <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -1472,35 +1472,35 @@
                       <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                     </ng-container>
-      
-      
-      
+
+
+
                     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-      
+
                   </mat-table>
-      
+
                   <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
                 </mat-expansion-panel>
-    
+
                  <!--*********************************Begin  expension voor MASTERS     Dames************************************************** -->
                <mat-expansion-panel>
                   <mat-expansion-panel-header>
                     <mat-panel-title>
-                        MASTERS       
+                        MASTERS
                     </mat-panel-title>
                     <mat-panel-description>
                       DAMES
                     </mat-panel-description>
                   </mat-expansion-panel-header>
-      
+
                   <mat-table [dataSource]="dataSourceMasDind" class="mat-elevation-z8">
                     <!-- Position Column -->
                     <ng-container matColumnDef="discipline">
                       <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                     </ng-container>
-      
+
                     <!-- Name Column -->
                     <ng-container matColumnDef="naam">
                       <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -1511,7 +1511,7 @@
                       <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                     </ng-container>
-      
+
                     <!-- Weight Column -->
                     <ng-container matColumnDef="plaats">
                       <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -1521,23 +1521,23 @@
                       <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                     </ng-container>
-      
-      
-      
+
+
+
                     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-      
+
                   </mat-table>
-      
+
                   <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
                 </mat-expansion-panel>
-      
+
                 <!--*********************************Begin  expension voor MASTERS     Heren************************************************** -->
-      
+
                 <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
                   <mat-expansion-panel-header>
                     <mat-panel-title>
-                        MASTERS      
+                        MASTERS
                     </mat-panel-title>
                     <mat-panel-description>
                       HEREN
@@ -1549,7 +1549,7 @@
                       <mat-header-cell *matHeaderCellDef> Discipline </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.discipline}} </mat-cell>
                     </ng-container>
-      
+
                     <!-- Name Column -->
                     <ng-container matColumnDef="naam">
                       <mat-header-cell *matHeaderCellDef> Naam</mat-header-cell>
@@ -1560,7 +1560,7 @@
                       <mat-header-cell *matHeaderCellDef> datum </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.datum}} </mat-cell>
                     </ng-container>
-      
+
                     <!-- Weight Column -->
                     <ng-container matColumnDef="plaats">
                       <mat-header-cell *matHeaderCellDef> Plaats </mat-header-cell>
@@ -1570,14 +1570,14 @@
                       <mat-header-cell *matHeaderCellDef> Records </mat-header-cell>
                       <mat-cell *matCellDef="let element"> {{element.records}} </mat-cell>
                     </ng-container>
-      
-      
-      
+
+
+
                     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-      
+
                   </mat-table>
-      
+
                   <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
                 </mat-expansion-panel>
             </mat-accordion>
