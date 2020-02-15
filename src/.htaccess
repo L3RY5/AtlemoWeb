@@ -1,0 +1,5 @@
+# Check that requested file or folder does not exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# If it does not, point the request to index.html instead
+RewriteRule ^([^?]*)$ /index.html [NC,L,QSA]
