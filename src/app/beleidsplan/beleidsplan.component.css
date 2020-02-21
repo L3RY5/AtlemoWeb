@@ -1,21 +1,32 @@
+h1 {
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 20px;
+  text-align: center;
+  font-variant-caps: small-caps;
+}
 
-h1{
-    font-weight: bold;
-    text-decoration: underline;
-    font-size: 20px;
-    text-align: center;
+h3 {
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 3em;
+  font-size: 17px;
 }
-h3{
-    font-weight: bold;
-    font-style: italic;
-	margin-top: 3em;
-	font-size: 17px;
-}
-h4{
-	font-style: italic;
-	text-decoration: underline;
-	font-size: 14px;
-}
-.mat-typography{ height: 100%; width: 80%;  font-family: "Times New Roman", Times, serif;}
 
-p{font-size: 15px;}
+h4 {
+  font-style: italic;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.mat-typography {
+  height: 100%;
+  width: 80%;
+  max-width: 40em;
+  margin: auto auto;
+  font-family: "Times New Roman", Times, serif;
+}
+
+p {
+  font-size: 15px;
+}
