@@ -1,9 +1,10 @@
-//import { Http } from '@angular/http';
+// import { Http } from '@angular/http';
 import { Component, OnInit, NgModule } from '@angular/core';
 import {ErrorStateMatcher} from '@angular/material/core';
-import {FormBuilder,FormGroup,FormControl,FormGroupDirective,NgForm,Validators}from '@angular/forms';
+import {FormBuilder, FormGroup, FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {MatSnackBar} from '@angular/material/snack-bar';
-import { HttpClient} from "@angular/common/http";
+import { HttpClient} from '@angular/common/http';
+import { isDevMode } from '@angular/core';
 
 
 /** Error when invalid control is dirty, touched, or submitted. */
@@ -34,145 +35,117 @@ export interface Onderwerp {
 
 
 export class ContactComponent implements OnInit {
-naam: string;
-voornaam:string;
-telefoon:string;
-email:string;
-onderwerp:string;
-message:string;
-endpoint:string;
-http :  HttpClient;
+  naam: string;
+  voornaam: string;
+  telefoon: string;
+  email: string;
+  onderwerp: string;
+  message: string;
+  endpoint: string;
+  http: HttpClient;
 
- 
+
 
   selectedOnderwerp: string;
-  naamFormControl = new FormControl('', [Validators.required,
-    this.noWhitespaceValidator,
-  
+  naamFormControl = new FormControl('', [
+    Validators.required,
+    this.requiredTrimmed,
   ]);
-  voorNaamFormControl = new FormControl('', [Validators.required,
-    this.noWhitespaceValidator,
-   
+  voorNaamFormControl = new FormControl('', [
+    Validators.required,
+    this.requiredTrimmed,
   ]);
-comentaarFormControl = new FormControl('', [Validators.required,
-    this.noWhitespaceValidator,
+  comentaarFormControl = new FormControl('', [
+    Validators.required,
+    this.requiredTrimmed,
   ]);
- telFormControl = new FormControl('', [Validators.required,
-    this.noWhitespaceValidator,this.MinTenLetters
-
-
+  telFormControl = new FormControl('', [
+    Validators.required,
+    this.requiredTrimmed,
+    Validators.minLength(7)
   ]);
-  onderwerpFormControl = new FormControl('', [Validators.required
-
-
-  ]);
-  emailFormControl = new FormControl('', [Validators.required,
-    this.noWhitespaceValidator,Validators.email
-
-
+  onderwerpFormControl = new FormControl('', [Validators.required]);
+  emailFormControl = new FormControl('', [
+    Validators.required,
+    this.requiredTrimmed,
+    Validators.email
   ]);
 
   matcher = new MyErrorStateMatcher();
-  constructor(private _snackBar: MatSnackBar,http :  HttpClient) { 
-    this.http = http; }
- 
+
+  constructor(private _snackBar: MatSnackBar, http: HttpClient) {
+    this.http = http;
+  }
+
 
   ngOnInit() {
-    
-    /*this.naam=this.naamFormControl.value;
-    this.voornaam=this.voorNaamFormControl.value;
-    this.email=this.emailFormControl.value;
-    this.telefoon=this.telFormControl.value;
-    this.message=this.comentaarFormControl.value;
-    this.onderwerp=this.onderwerpFormControl.value;*/
-
-     //Start php via the built in server: $ php -S localhost:8000
-     this.endpoint = "https://vserver361.axc.eu/CMD_FILE_MANAGER/domains/molemgf361.361.axc.nl/public_html/sendEmail.php";
+    // Start php via the built in server: $ php -S localhost:8000
+    this.endpoint = 'sendEmail.php';
   }
-  public noWhitespaceValidator(control: FormControl) {
+
+  public requiredTrimmed(control: FormControl) {
     const isWhitespace = (control.value || '').trim().length === 0;
     const isValid = !isWhitespace;
-
     return isValid ? null : {
-      'whitespace': true
-    }
-
-    ;
+      whitespace: true
+    };
   }
 
-  public MinTenLetters(control: FormControl) {
-    const isWhitespace = (control.value || '').trim().length < 10;
-    const isValid = !isWhitespace;
-    return isValid ? null : {
-      'smallerdanTen': true
+  sendContactMail(event) {
+    event.target.disabled = true;
+
+    // Collect errors
+    const formErrors = [];
+    if (!this.naamFormControl.valid) {
+      formErrors.push('Naam niet correct ingevuld.'); }
+    if (!this.voorNaamFormControl.valid) {
+      formErrors.push('Voornaam niet correct ingevuld.'); }
+    if (!this.emailFormControl.valid) {
+      formErrors.push('Email niet correct ingevuld.'); }
+    if (!this.telFormControl.valid) {
+      formErrors.push('Telefoonnummer niet correct ingevuld.'); }
+    console.log(formErrors);
+
+    if (formErrors.length > 0) {
+      // Cannot get newlines to show without making a component for this
+      // which is too much effort right now.
+      this._snackBar.open(formErrors.join('\n'), 'Sluiten', {
+        duration: 5000,
+      });
+      event.target.disabled = false;
+      return;
     }
 
-    ;
-  }
-  sendContactMail(){
-    if(this.naamFormControl.valid){
-      console.log("ok naam");
-      if(this.voorNaamFormControl.valid){
-        console.log("ok voorNaam");
-        if(this.emailFormControl.valid){
-          console.log("ok email");
-          if(this.telFormControl.valid){
-            console.log("ok tel");
-            
-            console.log(this.naamFormControl.value);
-            console.log(this.voorNaamFormControl.value);
-            console.log(this.emailFormControl.value);
-            console.log(this.telFormControl.value);
-            console.log(this.comentaarFormControl.value);
-            console.log(this.onderwerpFormControl.value);
-            let postVars = {
-              email : this.emailFormControl.value,
-              naam : this.naamFormControl.value,
-              voornaam : this.voorNaamFormControl.value,
-              telefoon : this.telFormControl.value,
-              message : this.comentaarFormControl.value,
-              onderwerp:this.onderwerpFormControl.value
-            };
-            this.http.post(this.endpoint, postVars)
-            .subscribe( 
-                response => console.log(response),
-                response => console.log(response)
-            )
-  
-          }else{
-            this._snackBar.open("tel niet correct ingevuld", "Sluiten", {
+    // No errors, send message.
+    const postVars = {
+      email : this.emailFormControl.value,
+      naam : this.naamFormControl.value,
+      voornaam : this.voorNaamFormControl.value,
+      telefoon : this.telFormControl.value,
+      message : this.comentaarFormControl.value,
+      onderwerp : this.onderwerpFormControl.value
+    };
+    if (!isDevMode()) {
+      this.http.post(this.endpoint, postVars)
+        .subscribe(
+          response => {
+            console.log(response);
+            if (response['sent'] === true) {
+              event.target.innerText = 'Verstuurd!';
+            } else {
+              event.target.disabled = false;
+            }
+          },
+          error => {
+            console.log(error);
+            this._snackBar.open('Er ging iets mis bij het verzenden.', 'Sluiten', {
               duration: 5000,
             });
+            event.target.disabled = false;
           }
-        }else{
-          this._snackBar.open("email niet correct ingevuld", "Sluiten", {
-            duration: 5000,
-          });
-        }
-      }else{
-        this._snackBar.open("voorNaam niet correct ingevuld", "Sluiten", {
-          duration: 5000,
-        });
-      }
-    }else{
-      this._snackBar.open("naam niet correct ingevuld", "Sluiten", {
-        duration: 5000,
-      });
-    }
-
-  }
-  /*sendContactMail(){
-    if (this.naamFormControl.valid&&this.voorNaamFormControl.valid&&
-        this.emailFormControl.valid&&this.telFormControl.valid
-       ) {
-      console.log("ok");
-      
+        );
     } else {
-      this._snackBar.open("1 of meerdere velden zijn niet correct ingevuld", "Sluiten", {
-        duration: 5000,
-      });
+      console.log('Not sending mail in dev mode, local ISP probably blocks it anyway');
     }
-  }*/
-
- 
+  }
 }

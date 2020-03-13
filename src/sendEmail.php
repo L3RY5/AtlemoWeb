@@ -10,6 +10,7 @@ switch($_SERVER['REQUEST_METHOD']){
         exit;
     case("POST"): //Send the email;
         header("Access-Control-Allow-Origin: *");
+        header('Content-Type: application/json;charset=utf-8');
 
         $json = file_get_contents('php://input');
 
@@ -22,10 +23,18 @@ switch($_SERVER['REQUEST_METHOD']){
         $message = $params->message;
 
         $recipient = 'sedric.lodonou@atlemo.be';
-        $subject = 'new message';
-        $headers = "From: $naam <$email>";
+        $subject = 'Atlemo contactformulier: ' . $params->onderwerp;
+        $headers = "From: $naam $voornaam <$email>";
+        $body = "Bericht:\n" . $message . "\n\nTelefoonnummer: " . $telefoon;
 
-        mail($recipient, $subject, $message, $headers);
+        $result = [];
+        if (mail($recipient, $subject, $body, $headers)) {
+          $result['sent'] = true;
+        } else {
+          $result['sent'] = false;
+        }
+        $json = json_encode($result);
+        echo $json;
         break;
     default: //Reject any non POST or OPTIONS requests.
         header("Allow: POST", true, 405);
