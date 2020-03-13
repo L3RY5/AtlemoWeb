@@ -9,6 +9,15 @@ export class HomepageComponent implements OnInit {
 
   entries = [
     {
+      'title': 'Trainingen geschorst tot 3 april',
+      'img': 'assets/img/LogoAtlemoNormaal.jpg',
+      'results_url': '',
+      'album_url': '',
+      'text': 'Vanaf vandaag 13 maart zijn alle (jeugd)trainingen geschorst tot 3 april 2020.',
+      'more_text': 'Deze beslissing werd genomen in navolging van de beslissing van de federale regering om alle sportactiviteiten te schorsen. Zorg in deze periode goed voor jezelf en je naasten zodat we na deze periode eens zo goed kunnen sporten. Alleen of in kleine groepjes lopen is trouwens geen probleem. Blijf dus wel in beweging!',
+      'collapsed': true,
+    },
+    {
       'title': '46ste Sparta Cross 23/11',
       'img': 'assets/img/drieFontain.jpg',
       'results_url': 'https://www.sparta-vilvoorde.be/images/cross_23.11.2019.pdf',
