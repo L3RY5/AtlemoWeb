@@ -33,8 +33,6 @@ export interface RecordGroup {
   records: MatTableDataSource<clubRecordsInt>;
 }
 
-// Need to add pagination still
-// See bottom of file for how it is currently done.
 const outdoorRecords: RecordGroup[] = [
   {
     gender: Gender.Meisjes,
@@ -372,218 +370,243 @@ const outdoorRecords: RecordGroup[] = [
   },
 ];
 
-/* begin Tabellen met de clubb records */
-/*BEN */
-const RECORDBEN_MEISJESind: clubRecordsInt[] = [
-  {discipline:"60m",naam:"Hasani Geraldine",datum:"27-03-2004",plaats:"Gent",records:"10\"06"},
-  {discipline:"1000m",naam:"Byrne Chinook",datum:"29-12-2007",plaats:"Gent",records:"4'22\"84"},
-  {discipline:"Hoogspringen",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Verspringen",naam:"Hasani Geraldine",datum:"10-01-2004",plaats:"Woluwe",records:"3m51"},
-  {discipline:"Kogelstoten",naam:"Hasani Geraldine",datum:"10-01-2004",plaats:"Woluwe",records:"7m62"},
-  {discipline:"Vierkamp",naam:"",datum:"",plaats:"",records:""},
-
-
+const indoorRecords: RecordGroup[] = [
+  {
+    gender: Gender.Meisjes,
+    ageCategory: AgeCategory.Benjamins,
+    records: new MatTableDataSource([
+      {discipline:"60m",naam:"Hasani Geraldine",datum:"27-03-2004",plaats:"Gent",records:"10\"06"},
+      {discipline:"1000m",naam:"Byrne Chinook",datum:"29-12-2007",plaats:"Gent",records:"4'22\"84"},
+      {discipline:"Hoogspringen",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Verspringen",naam:"Hasani Geraldine",datum:"10-01-2004",plaats:"Woluwe",records:"3m51"},
+      {discipline:"Kogelstoten",naam:"Hasani Geraldine",datum:"10-01-2004",plaats:"Woluwe",records:"7m62"},
+      {discipline:"Vierkamp",naam:"",datum:"",plaats:"",records:""},
+    ])
+  },
+  {
+    gender: Gender.Jongens,
+    ageCategory: AgeCategory.Benjamins,
+    records: new MatTableDataSource([
+      {discipline:"60m",naam:"Davies Denis",datum:"10-01-2004",plaats:"Woluwe",records:"10\"20"},
+      {discipline:"1000m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Hoogspringen",naam:"Davies Denis",datum:"10-01-2004",plaats:"Woluwe",records:"85cm"},
+      {discipline:"Verspringen",naam:"Zerrad Youne",datum:"23-3-2002",plaats:"Gent",records:"2m75"},
+      {discipline:"Kogelstoten",naam:"Amezyan Imadedine",datum:"13-12-2008",plaats:"Woluwe",records:"6m25"},
+      {discipline:"Vierkamp",naam:"",datum:"",plaats:"",records:""},
+    ])
+  },
+  {
+    gender: Gender.Meisjes,
+    ageCategory: AgeCategory.Pupillen,
+    records: new MatTableDataSource([
+      {discipline:"60m",naam:"Byrne Chinook",datum:"26-12-2009",plaats:"Gent",records:"10\"16"},
+      {discipline:"1000m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Hoogspringen",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Verspringen",naam:"Byrne Chinook",datum:"9-12-2007",plaats:"Gent",records:"2m65"},
+      {discipline:"Kogelstoten",naam:"Dari Jamaa",datum:"30-12-2000",plaats:"Gent",records:"2m73"},
+      {discipline:"Vierkamp",naam:"",datum:"",plaats:"",records:""},
+    ])
+  },
+  {
+    gender: Gender.Jongens,
+    ageCategory: AgeCategory.Pupillen,
+    records: new MatTableDataSource([
+      {discipline:"60m",naam:"Dannou Mohamed",datum:"15-12-2001",plaats:"Woluwe",records:"10\"10"},
+      {discipline:"1000m",naam:"Yahklef Hamza",datum:"23-02-2002",plaats:"Gent",records:"3'49\"33"},
+      {discipline:"60m Horden",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Hoogspringen",naam:"Yahklef Hamza",datum:"1-12-2001",plaats:"Woluwe",records:"1m05"},
+      {discipline:"Verspringen",naam:"Dahhou Mohamed	",datum:"1-12-2001",plaats:"Woluwe",records:"3m65"},
+      {discipline:"Kogelstoten",naam:"Bougdim Amine	",datum:"14-1-2001",plaats:"Gent",records:"5m65"},
+      {discipline:"Vierkamp",naam:"",datum:"",plaats:"",records:""},
+    ])
+  },
+  {
+    gender: Gender.Meisjes,
+    ageCategory: AgeCategory.Miniemen,
+    records: new MatTableDataSource([
+      {discipline:"60m",naam:"Nana-Owusu Philomena",datum:"17-12-2011",plaats:"Woluwe",records:"8\"83"},
+      {discipline:"150m",naam:"Ackerman Aurélie",datum:"29-12-2001",plaats:"Gent",records:"22\"76"},
+      {discipline:"300m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"1000m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"60mHorden",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Hoogspringen",naam:"Ackerman Aurélie",datum:"29-12-2001",plaats:"Gent",records:"1m38"},
+      {discipline:"Verspringen",naam:"Ackerman Aurélie",datum:"1-12-2001",plaats:"Woluwe",records:"3m91"},
+      {discipline:"Kogelstoten",naam:"Zahar Btisam",datum:"1-12-2001",plaats:"Woluwe",records:"9m17"},
+    ])
+  },
+  {
+    gender: Gender.Jongens,
+    ageCategory: AgeCategory.Miniemen,
+    records: new MatTableDataSource([
+      {discipline:"60m",naam:"Roefmans Lucas",datum:"22-03-2014",plaats:"Gent",records:"8\"74"},
+      {discipline:"150m",naam:"Mirzoian Artur",datum:"29-12-2001",plaats:"Gent",records:"24\"00"},
+      {discipline:"300m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"1000m",naam:"Aabayla Abdelsamad",datum:"22-3-2003",plaats:"Gent",records:"3'15\"20"},
+      {discipline:"60mHorden",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Hoogspringen",naam:"Davies Isaac",datum:"20-12-2002",plaats:"Woluwe",records:"1m20"},
+      {discipline:"Verspringen",naam:"Roefmans Lucas",datum:"22-03-2014",plaats:"Gent",records:"4m26"},
+      {discipline:"Kogelstoten",naam:"Ariozsoy ziya",datum:"23-12-2000",plaats:"Gent",records:"7m03"},
+      {discipline:"Vijfkamp",naam:"",datum:"",plaats:"",records:""},
+    ])
+  },
+  {
+    gender: Gender.Dames,
+    ageCategory: AgeCategory.Kadetten,
+    records: new MatTableDataSource([
+      {discipline:"60m",naam:"Nana-Owusu Pilomena",datum:"02-03-2014",plaats:"Gent",records:"8\"32"},
+      {discipline:"200m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"400m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"800m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"60mHorden",naam:"Ackerman Aurélie",datum:"23-02-2003",plaats:"Gent",records:"10\"61"},
+      {discipline:"Hoogspringen",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Verspringen",naam:"Ackerman Aurélie",datum:"4-1-2003",plaats:"Gent",records:"4m00"},
+      {discipline:"Kogelstoten",naam:"",datum:"",plaats:"",records:""},
+    ])
+  },
+  {
+    gender: Gender.Heren,
+    ageCategory: AgeCategory.Kadetten,
+    records: new MatTableDataSource([
+      {discipline:"60m",naam:"M'Rabet Ismael",datum:"27-02-2011",plaats:"Gent",records:"8\"15"},
+      {discipline:"200m",naam:"Ciccarone Tommaso",datum:"13-03-2004",plaats:"Gent",records:"26\"49"},
+      {discipline:"400m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"800m",naam:"Melhaoui Sidi-Mohamed",datum:"27-03-2004",plaats:"Gent",records:"2'04\"30"},
+      {discipline:"60mHorden",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Hoogspringen",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Verspringen",naam:"M'Rabet Ismael",datum:"08-01-2012",plaats:"Gent",records:"4m87"},
+      {discipline:"Kogelstoten",naam:"Fallah Ayoub",datum:"17-12-2011",plaats:"Woluwe",records:"9m53"},
+    ])
+  },
+  {
+    gender: Gender.Dames,
+    ageCategory: AgeCategory.Scholieren,
+    records: new MatTableDataSource([
+      {discipline:"60m",naam:"Geldof Mayté",datum:"08-01-2012",plaats:"Gent",records:"8\"89"},
+      {discipline:"200m",naam:"Geldof Mayté",datum:"08-01-2012",plaats:"Gent",records:"29\"56"},
+      {discipline:"400m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"800m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"60mHorden",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Verspringen",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Hoogspringen",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Kogelstoten",naam:"",datum:"",plaats:"",records:""},
+    ])
+  },
+  {
+    gender: Gender.Heren,
+    ageCategory: AgeCategory.Scholieren,
+    records: new MatTableDataSource([
+      {discipline:"60m",naam:"Kouagnia Rocky",datum:"19-03-2006",plaats:"Gent",records:"7\"72"},
+      {discipline:"200m",naam:"Kouagnia Rocky",datum:"19-03-2006",plaats:"Gent",records:"25\"23"},
+      {discipline:"400m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"1000m",naam:"Temsamani Jawad",datum:"03-03-2001",plaats:"Gent",records:"2'47\"5"},
+      {discipline:"1500m",naam:"Temsamani Jawad",datum:"31-03-2001",plaats:"Gent",records:"4'33\"58"},
+      {discipline:"60mHorden",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"4x200m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Hoogspringen",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Verspringen",naam:"Akhmadov Manzul",datum:"27-02-2010",plaats:"Gent",records:"5m04"},
+      {discipline:"Kogelstoten",naam:"Jimenez Luis",datum:"20-12-2003",plaats:"Woluwe",records:"10m64"},
+    ])
+  },
+  {
+    gender: Gender.Dames,
+    ageCategory: AgeCategory.Juniors,
+    records: new MatTableDataSource([
+      {discipline:"60m",naam:"Barghout Farah",datum:"08-01-2012",plaats:"Gent",records:"9\"83"},
+      {discipline:"200m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"400m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"800m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"60mHorden",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Hoogspringen",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Verspringen",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Kogelstoten",naam:"",datum:"",plaats:"",records:""},
+    ])
+  },
+  {
+    gender: Gender.Heren,
+    ageCategory: AgeCategory.Juniors,
+    records: new MatTableDataSource([
+      {discipline:"60m",naam:"Es-sanfaoui Khalid",datum:"22-02-2014",plaats:"Gent",records:"7\"66"},
+      {discipline:"200m",naam:"Es-sanfaoui Khalid",datum:"05-01-2014",plaats:"Gent",records:"24\"22"},
+      {discipline:"400m",naam:"Mokkadem Hocine",datum:"5-3-2000",plaats:"Gent",records:"51\"57"},
+      {discipline:"800m",naam:"Mokkadem Hocine",datum:"23-1-2000",plaats:"Gent",records:"2'00\"57"},
+      {discipline:"1000m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"1500m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"3000m",naam:"Abid Mourad",datum:"31-03-2001",plaats:"Gent",records:"10'22\"66"},
+      {discipline:"60mHorden",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Hoogspringen",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Verspringen",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Kogelstoten",naam:"Ariozsoy Ziya",datum:"15-01-2006",plaats:"Gent",records:"11m84"},
+    ])
+  },
+  {
+    gender: Gender.Dames,
+    ageCategory: AgeCategory.Seniors,
+    records: new MatTableDataSource([
+      {discipline:"60",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"200m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"400m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"800m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"1000m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"1500m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"3000m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"60mHorden",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Hoogspringen",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Verspringen",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Kogelstoten",naam:"",datum:"",plaats:"",records:""},
+    ])
+  },
+  {
+    gender: Gender.Heren,
+    ageCategory: AgeCategory.Seniors,
+    records: new MatTableDataSource([
+      {discipline:"60m",naam:"Bah Oumar",datum:"26-12-2010",plaats:"Gent",records:"7\"22"},
+      {discipline:"200m",naam:"Bah Oumar",datum:"26-12-2010",plaats:"Gent",records:"23\"25"},
+      {discipline:"400m",naam:"Mokkadem Hocine",datum:"18-02-2001",plaats:"Gent",records:"51\"05"},
+      {discipline:"800m",naam:"Jallouli Tarik",datum:"04-01-2003",plaats:"Gent",records:"1'55\"31"},
+      {discipline:"1000m",naam:"Jallouli Tarik",datum:"03-03-2001",plaats:"Gent",records:"2'35\"18"},
+      {discipline:"1500m",naam:"Rizki Monder",datum:"22-02-2004",plaats:"Gent",records:"3'42\"83"},
+      {discipline:"3000m",naam:"Rizki Monder",datum:"04-02-2006",plaats:"Stuttgart",records:"7'53\"67"},
+      {discipline:"60mHorden",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"4x200m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Hoogspringen",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Verspringen",naam:"El Bakhlaki Youssef",datum:"27-03-2004",plaats:"Gent",records:"6m29"},
+      {discipline:"Kogelstoten",naam:"Drieghe Davy",datum:"20-12-2003",plaats:"Woluwe",records:"8m21"},
+    ])
+  },
+  {
+    gender: Gender.Dames,
+    ageCategory: AgeCategory.Masters,
+    records: new MatTableDataSource([
+      {discipline:"",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"",naam:"",datum:"",plaats:"",records:""},
+    ])
+  },
+  {
+    gender: Gender.Heren,
+    ageCategory: AgeCategory.Masters,
+    records: new MatTableDataSource([
+      {discipline:"60m",naam:"Byrne Tim",datum:"19-03-2006",plaats:"Gent",records:"7\"87"},
+      {discipline:"200m",naam:"Byrne Tim",datum:"19-03-2006",plaats:"Gent",records:"25\"02"},
+      {discipline:"400m",naam:"Byrne Tim",datum:"27-02-2011",plaats:"Gent",records:"39\"12"},
+      {discipline:"800m",naam:"Byrne Tim",datum:"26-02-2011",plaats:"Gent",records:"53\"55"},
+      {discipline:"1000m",naam:"Byrne Tim",datum:"08-03-2008",plaats:"Gent",records:"2'06\"35"},
+      {discipline:"60mHorden",naam:"Byrne Tim",datum:"16-03-2008",plaats:"Gent",records:"2'50\"70"},
+      {discipline:"4x200m",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Hoogspringen",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Verspringen",naam:"",datum:"",plaats:"",records:""},
+      {discipline:"Kogelstoten",naam:"",datum:"",plaats:"",records:""},
+    ])
+  },
 ];
-const RECORDBEN_JONGENSind: clubRecordsInt[] = [
-  {discipline:"60m",naam:"Davies Denis",datum:"10-01-2004",plaats:"Woluwe",records:"10\"20"},
-  {discipline:"1000m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Hoogspringen",naam:"Davies Denis",datum:"10-01-2004",plaats:"Woluwe",records:"85cm"},
-  {discipline:"Verspringen",naam:"Zerrad Youne",datum:"23-3-2002",plaats:"Gent",records:"2m75"},
-  {discipline:"Kogelstoten",naam:"Amezyan Imadedine",datum:"13-12-2008",plaats:"Woluwe",records:"6m25"},
-  {discipline:"Vierkamp",naam:"",datum:"",plaats:"",records:""},
 
-
-];
-
-/*pup*/
-const RECORDPUP_MEISJESind: clubRecordsInt[] = [
-  {discipline:"60m",naam:"Byrne Chinook",datum:"26-12-2009",plaats:"Gent",records:"10\"16"},
-  {discipline:"1000m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Hoogspringen",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Verspringen",naam:"Byrne Chinook",datum:"9-12-2007",plaats:"Gent",records:"2m65"},
-  {discipline:"Kogelstoten",naam:"Dari Jamaa",datum:"30-12-2000",plaats:"Gent",records:"2m73"},
-  {discipline:"Vierkamp",naam:"",datum:"",plaats:"",records:""},
-];
-const RECORDPUP_JONGENSind: clubRecordsInt[] = [
-  {discipline:"60m",naam:"Dannou Mohamed",datum:"15-12-2001",plaats:"Woluwe",records:"10\"10"},
-  {discipline:"1000m",naam:"Yahklef Hamza",datum:"23-02-2002",plaats:"Gent",records:"3'49\"33"},
-  {discipline:"60m Horden",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Hoogspringen",naam:"Yahklef Hamza",datum:"1-12-2001",plaats:"Woluwe",records:"1m05"},
-  {discipline:"Verspringen",naam:"Dahhou Mohamed	",datum:"1-12-2001",plaats:"Woluwe",records:"3m65"},
-  {discipline:"Kogelstoten",naam:"Bougdim Amine	",datum:"14-1-2001",plaats:"Gent",records:"5m65"},
-  {discipline:"Vierkamp",naam:"",datum:"",plaats:"",records:""},
-];
-
-/*Min */
-
-const RECORDMIN_MEISJESind: clubRecordsInt[] = [
-
-  {discipline:"60m",naam:"Nana-Owusu Philomena",datum:"17-12-2011",plaats:"Woluwe",records:"8\"83"},
-  {discipline:"150m",naam:"Ackerman Aurélie",datum:"29-12-2001",plaats:"Gent",records:"22\"76"},
-  {discipline:"300m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"1000m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"60mHorden",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Hoogspringen",naam:"Ackerman Aurélie",datum:"29-12-2001",plaats:"Gent",records:"1m38"},
-  {discipline:"Verspringen",naam:"Ackerman Aurélie",datum:"1-12-2001",plaats:"Woluwe",records:"3m91"},
-  {discipline:"Kogelstoten",naam:"Zahar Btisam",datum:"1-12-2001",plaats:"Woluwe",records:"9m17"},
-
-
-];
-const RECORDMIN_JONGENSind: clubRecordsInt[] = [
-  {discipline:"60m",naam:"Roefmans Lucas",datum:"22-03-2014",plaats:"Gent",records:"8\"74"},
-  {discipline:"150m",naam:"Mirzoian Artur",datum:"29-12-2001",plaats:"Gent",records:"24\"00"},
-  {discipline:"300m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"1000m",naam:"Aabayla Abdelsamad",datum:"22-3-2003",plaats:"Gent",records:"3'15\"20"},
-  {discipline:"60mHorden",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Hoogspringen",naam:"Davies Isaac",datum:"20-12-2002",plaats:"Woluwe",records:"1m20"},
-  {discipline:"Verspringen",naam:"Roefmans Lucas",datum:"22-03-2014",plaats:"Gent",records:"4m26"},
-  {discipline:"Kogelstoten",naam:"Ariozsoy ziya",datum:"23-12-2000",plaats:"Gent",records:"7m03"},
-  {discipline:"Vijfkamp",naam:"",datum:"",plaats:"",records:""},
-
-
-];
-
-/*KAD */
-
-const RECORDKAD_DAMESind: clubRecordsInt[] = [
-  {discipline:"60m",naam:"Nana-Owusu Pilomena",datum:"02-03-2014",plaats:"Gent",records:"8\"32"},
-  {discipline:"200m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"400m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"800m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"60mHorden",naam:"Ackerman Aurélie",datum:"23-02-2003",plaats:"Gent",records:"10\"61"},
-  {discipline:"Hoogspringen",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Verspringen",naam:"Ackerman Aurélie",datum:"4-1-2003",plaats:"Gent",records:"4m00"},
-  {discipline:"Kogelstoten",naam:"",datum:"",plaats:"",records:""},
-];
-const RECORDKAD_HERENind: clubRecordsInt[] = [
-  {discipline:"60m",naam:"M'Rabet Ismael",datum:"27-02-2011",plaats:"Gent",records:"8\"15"},
-  {discipline:"200m",naam:"Ciccarone Tommaso",datum:"13-03-2004",plaats:"Gent",records:"26\"49"},
-  {discipline:"400m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"800m",naam:"Melhaoui Sidi-Mohamed",datum:"27-03-2004",plaats:"Gent",records:"2'04\"30"},
-  {discipline:"60mHorden",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Hoogspringen",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Verspringen",naam:"M'Rabet Ismael",datum:"08-01-2012",plaats:"Gent",records:"4m87"},
-  {discipline:"Kogelstoten",naam:"Fallah Ayoub",datum:"17-12-2011",plaats:"Woluwe",records:"9m53"},
-
-
-];
-
-/*SCH */
-
-const RECORDSCH_DAMESind: clubRecordsInt[] = [
-  {discipline:"60m",naam:"Geldof Mayté",datum:"08-01-2012",plaats:"Gent",records:"8\"89"},
-  {discipline:"200m",naam:"Geldof Mayté",datum:"08-01-2012",plaats:"Gent",records:"29\"56"},
-  {discipline:"400m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"800m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"60mHorden",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Verspringen",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Hoogspringen",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Kogelstoten",naam:"",datum:"",plaats:"",records:""},
-
-];
-const RECORDSCH_HERENind: clubRecordsInt[] = [
-  {discipline:"60m",naam:"Kouagnia Rocky",datum:"19-03-2006",plaats:"Gent",records:"7\"72"},
-  {discipline:"200m",naam:"Kouagnia Rocky",datum:"19-03-2006",plaats:"Gent",records:"25\"23"},
-  {discipline:"400m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"1000m",naam:"Temsamani Jawad",datum:"03-03-2001",plaats:"Gent",records:"2'47\"5"},
-  {discipline:"1500m",naam:"Temsamani Jawad",datum:"31-03-2001",plaats:"Gent",records:"4'33\"58"},
-  {discipline:"60mHorden",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"4x200m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Hoogspringen",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Verspringen",naam:"Akhmadov Manzul",datum:"27-02-2010",plaats:"Gent",records:"5m04"},
-  {discipline:"Kogelstoten",naam:"Jimenez Luis",datum:"20-12-2003",plaats:"Woluwe",records:"10m64"},
-
-];
-
-/*Jun */
-
-const RECORDJUN_DAMESind: clubRecordsInt[] = [
-  {discipline:"60m",naam:"Barghout Farah",datum:"08-01-2012",plaats:"Gent",records:"9\"83"},
-  {discipline:"200m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"400m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"800m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"60mHorden",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Hoogspringen",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Verspringen",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Kogelstoten",naam:"",datum:"",plaats:"",records:""},
-
-
-];
-const RECORDJUN_HERENind: clubRecordsInt[] = [
-  {discipline:"60m",naam:"Es-sanfaoui Khalid",datum:"22-02-2014",plaats:"Gent",records:"7\"66"},
-  {discipline:"200m",naam:"Es-sanfaoui Khalid",datum:"05-01-2014",plaats:"Gent",records:"24\"22"},
-  {discipline:"400m",naam:"Mokkadem Hocine",datum:"5-3-2000",plaats:"Gent",records:"51\"57"},
-  {discipline:"800m",naam:"Mokkadem Hocine",datum:"23-1-2000",plaats:"Gent",records:"2'00\"57"},
-  {discipline:"1000m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"1500m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"3000m",naam:"Abid Mourad",datum:"31-03-2001",plaats:"Gent",records:"10'22\"66"},
-  {discipline:"60mHorden",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Hoogspringen",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Verspringen",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Kogelstoten",naam:"Ariozsoy Ziya",datum:"15-01-2006",plaats:"Gent",records:"11m84"},
-
-];
-/*SEN */
-const RECORDSEN_DAMESind: clubRecordsInt[] = [
-  {discipline:"60",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"200m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"400m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"800m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"1000m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"1500m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"3000m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"60mHorden",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Hoogspringen",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Verspringen",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Kogelstoten",naam:"",datum:"",plaats:"",records:""},
-
-];
-const RECORDSEN_HERENind: clubRecordsInt[] = [
-  {discipline:"60m",naam:"Bah Oumar",datum:"26-12-2010",plaats:"Gent",records:"7\"22"},
-  {discipline:"200m",naam:"Bah Oumar",datum:"26-12-2010",plaats:"Gent",records:"23\"25"},
-  {discipline:"400m",naam:"Mokkadem Hocine",datum:"18-02-2001",plaats:"Gent",records:"51\"05"},
-  {discipline:"800m",naam:"Jallouli Tarik",datum:"04-01-2003",plaats:"Gent",records:"1'55\"31"},
-  {discipline:"1000m",naam:"Jallouli Tarik",datum:"03-03-2001",plaats:"Gent",records:"2'35\"18"},
-  {discipline:"1500m",naam:"Rizki Monder",datum:"22-02-2004",plaats:"Gent",records:"3'42\"83"},
-  {discipline:"3000m",naam:"Rizki Monder",datum:"04-02-2006",plaats:"Stuttgart",records:"7'53\"67"},
-  {discipline:"60mHorden",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"4x200m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Hoogspringen",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Verspringen",naam:"El Bakhlaki Youssef",datum:"27-03-2004",plaats:"Gent",records:"6m29"},
-  {discipline:"Kogelstoten",naam:"Drieghe Davy",datum:"20-12-2003",plaats:"Woluwe",records:"8m21"},
-
-
-];
-
-/*MAS */
-const RECORDMAS_DAMESind: clubRecordsInt[] = [
-  {discipline:"",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"",naam:"",datum:"",plaats:"",records:""},
-
-];
-const RECORDMAS_HERENind: clubRecordsInt[] = [
-  {discipline:"60m",naam:"Byrne Tim",datum:"19-03-2006",plaats:"Gent",records:"7\"87"},
-  {discipline:"200m",naam:"Byrne Tim",datum:"19-03-2006",plaats:"Gent",records:"25\"02"},
-  {discipline:"400m",naam:"Byrne Tim",datum:"27-02-2011",plaats:"Gent",records:"39\"12"},
-  {discipline:"800m",naam:"Byrne Tim",datum:"26-02-2011",plaats:"Gent",records:"53\"55"},
-  {discipline:"1000m",naam:"Byrne Tim",datum:"08-03-2008",plaats:"Gent",records:"2'06\"35"},
-  {discipline:"60mHorden",naam:"Byrne Tim",datum:"16-03-2008",plaats:"Gent",records:"2'50\"70"},
-  {discipline:"4x200m",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Hoogspringen",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Verspringen",naam:"",datum:"",plaats:"",records:""},
-  {discipline:"Kogelstoten",naam:"",datum:"",plaats:"",records:""},
-
-];
-
-/* einde Tabellen met de clubb records */
 @Component({
   selector: 'app-clubrecords',
   templateUrl: './clubrecords.component.html',
@@ -591,89 +614,31 @@ const RECORDMAS_HERENind: clubRecordsInt[] = [
 })
 export class ClubrecordsComponent implements OnInit  {
   outdoorRecords: RecordGroup[];
-  /**indoor */
-  dataSourceBenMind : MatTableDataSource<clubRecordsInt>;
-  dataSourceBenJind : MatTableDataSource<clubRecordsInt>;
-  dataSourcePupMind : MatTableDataSource<clubRecordsInt>;
-  dataSourcePupJind : MatTableDataSource<clubRecordsInt>;
-  dataSourceMinMind : MatTableDataSource<clubRecordsInt>;
-  dataSourceMinJind : MatTableDataSource<clubRecordsInt>;
-  dataSourceKadDind : MatTableDataSource<clubRecordsInt>;
-  dataSourceKadHind : MatTableDataSource<clubRecordsInt>;
-  dataSourceSchDind : MatTableDataSource<clubRecordsInt>;
-  dataSourceSchHind : MatTableDataSource<clubRecordsInt>;
-  dataSourceJunDind : MatTableDataSource<clubRecordsInt>;
-  dataSourceJunHind : MatTableDataSource<clubRecordsInt>;
-  dataSourceSenDind : MatTableDataSource<clubRecordsInt>;
-  dataSourceSenHind : MatTableDataSource<clubRecordsInt>;
-  dataSourceMasDind : MatTableDataSource<clubRecordsInt>;
-  dataSourceMasHind : MatTableDataSource<clubRecordsInt>;
-
-
+  indoorRecords: RecordGroup[];
 
   @ViewChildren(MatPaginator) paginator = new QueryList<MatPaginator>();
   @ViewChildren(MatPaginator) paginatorIndoor = new QueryList<MatPaginator>();
 
-
   displayedColumns: string[] = ['discipline', 'naam','datum', 'plaats','records'];
-
-
-
-
-
 
   panelOpenState = false;
 
   constructor() {
     this.outdoorRecords = outdoorRecords;
-
-    /*Datasources tabellen indoor */
-    this.dataSourceBenMind =  new MatTableDataSource<clubRecordsInt>(RECORDBEN_MEISJESind);
-    this.dataSourceBenJind =  new MatTableDataSource<clubRecordsInt>(RECORDBEN_JONGENSind);
-    this.dataSourcePupMind =  new MatTableDataSource<clubRecordsInt>(RECORDPUP_MEISJESind);
-    this.dataSourcePupJind =  new MatTableDataSource<clubRecordsInt>(RECORDPUP_JONGENSind);
-    this.dataSourceMinMind =  new MatTableDataSource<clubRecordsInt>(RECORDMIN_MEISJESind);
-    this.dataSourceMinJind =  new MatTableDataSource<clubRecordsInt>(RECORDMIN_JONGENSind);
-    this.dataSourceKadDind =  new MatTableDataSource<clubRecordsInt>(RECORDKAD_DAMESind);
-    this.dataSourceKadHind =  new MatTableDataSource<clubRecordsInt>(RECORDKAD_HERENind);
-    this.dataSourceSchDind =  new MatTableDataSource<clubRecordsInt>(RECORDSCH_DAMESind);
-    this.dataSourceSchHind =  new MatTableDataSource<clubRecordsInt>(RECORDSCH_HERENind);
-    this.dataSourceJunDind =  new MatTableDataSource<clubRecordsInt>(RECORDJUN_DAMESind);
-    this.dataSourceJunHind =  new MatTableDataSource<clubRecordsInt>(RECORDJUN_HERENind);
-    this.dataSourceSenDind =  new MatTableDataSource<clubRecordsInt>(RECORDSEN_DAMESind);
-    this.dataSourceSenHind =  new MatTableDataSource<clubRecordsInt>(RECORDSEN_HERENind);
-    this.dataSourceMasDind =  new MatTableDataSource<clubRecordsInt>(RECORDMAS_DAMESind);
-    this.dataSourceMasHind =  new MatTableDataSource<clubRecordsInt>(RECORDMAS_HERENind);
-    /*einde datasources tabellen indoor */
+    this.indoorRecords = indoorRecords;
   }
 
-  ngOnInit() {
+  ngOnInit() { }
 
-  }
   ngAfterViewInit() {
-    /*outdoor*/
-    for (let i = 0; i < this.outdoorRecords.length; i++) {
+    /* Outdoor*/
+    let outdoorLength = this.outdoorRecords.length;
+    for (let i = 0; i < outdoorLength; i++) {
       this.outdoorRecords[i].records.paginator = this.paginator.toArray()[i];
     }
-
-    /**Indoor */
-    this.dataSourceBenMind.paginator=this.paginator.toArray()[16];
-    this.dataSourceBenJind.paginator=this.paginator.toArray()[17];
-    this.dataSourcePupMind.paginator=this.paginator.toArray()[18];
-    this.dataSourcePupJind.paginator=this.paginator.toArray()[19];
-    this.dataSourceMinMind.paginator=this.paginator.toArray()[20];
-    this.dataSourceMinJind.paginator=this.paginator.toArray()[21];
-    this.dataSourceKadDind.paginator=this.paginator.toArray()[22];
-    this.dataSourceKadHind.paginator=this.paginator.toArray()[23];
-    this.dataSourceSchDind.paginator=this.paginator.toArray()[24];
-    this.dataSourceSchHind.paginator=this.paginator.toArray()[25];
-    this.dataSourceJunDind.paginator=this.paginator.toArray()[26];
-    this.dataSourceJunHind.paginator=this.paginator.toArray()[27];
-    this.dataSourceSenDind.paginator=this.paginator.toArray()[28];
-    this.dataSourceSenHind.paginator=this.paginator.toArray()[29];
-    this.dataSourceMasDind.paginator=this.paginator.toArray()[30];
-    this.dataSourceMasHind.paginator=this.paginator.toArray()[31];
+    /* Indoor*/
+    for (let i = 0; i < this.indoorRecords.length; i++) {
+      this.indoorRecords[i].records.paginator = this.paginator.toArray()[i + outdoorLength];
+    }
   }
-
-
 }
