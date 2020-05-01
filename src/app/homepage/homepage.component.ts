@@ -9,7 +9,18 @@ export class HomepageComponent implements OnInit {
 
   entries = [
     {
+      'title': 'Heropstart trainingen wordt voorbereid',
+      'date': '2020-05-01',
+      'img': 'assets/img/LogoAtlemoNormaal.jpg',
+      'results_url': '',
+      'album_url': '',
+      'text': 'Atlemo bereidt momenteel volop de heropstart van de trainingen voor aan de hand van de opgestelde richtlijnen door de Vlaamse Atletiekliga.',
+      'more_text': "Een precieze datum voor de heropstart is nog niet bekend, maar blijf ons volgen hier of op facebook om op de hoogte te blijven. Indien vragen stuur ons gerust een bericht via de facebook pagina, via het emailadres: info@atlemo.be, of via een bericht naar Hamza of Maarten. Atlemo prépare actuellement la reprise des entraînements sur la base des directives établies par la Ligue flamande d'athlétisme. Une date exacte pour la reprise n'est pas encore connue, restez connecter ici ou sur facebook afin d'avoir plus d'information. Si vous avez des questions, veuillez nous envoyer un message via la page facebook, via l'adresse e-mail: info@atlemo.be, ou via un message à Hamza ou Maarten.",
+      'collapsed': true,
+    },
+    {
       'title': 'Trainingen geschorst tot 3 april',
+      'date': '2020-03-13',
       'img': 'assets/img/LogoAtlemoNormaal.jpg',
       'results_url': '',
       'album_url': '',
