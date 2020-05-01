@@ -2,8 +2,7 @@
 
   <!-- begin div met alle artikels -->
   <div class="articleDiv">
-    <!-- article 1 -->
-    <div class="storyArticle">
+    <div class="storyArticleHead">
       <h2>Actualiteit</h2>
       <mat-divider class="firstODivide"></mat-divider>
     </div>
@@ -14,8 +13,13 @@
             <img src="{{ entry.img }}" class="fotoArticle" />
           </a>
         </div>
+        <div class="articledate">
+          <p>
+          {{ entry.date }}
+          </p>
+        </div>
         <div class="articletext">
-          <h3 class="titleEvent">{{ entry.title }}</h3>
+          <h3>{{ entry.title }}</h3>
           <p>{{ entry.text }}
             <span *ngIf="!entry.collapsed" style="white-space: pre-line">
               {{ entry.more_text }}
