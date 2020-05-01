@@ -2,9 +2,9 @@
   <mat-tab-group>
     <!-- begin winter tab -->
     <mat-tab label="Winter">
-                <mat-form-field>
-                                <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-                              </mat-form-field>
+      <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      </mat-form-field>
       <diV class="wedstrijdDiv">
 
 
@@ -17,13 +17,13 @@
 
           <!-- Name Column -->
           <ng-container matColumnDef="club">
-                        <mat-header-cell *matHeaderCellDef> Naam </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.club}} </mat-cell>
-                      </ng-container>
+            <mat-header-cell *matHeaderCellDef> Naam </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.club}} </mat-cell>
+          </ng-container>
           <ng-container matColumnDef="categorieen">
-                        <mat-header-cell *matHeaderCellDef> Categorieën </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.categorieen}} </mat-cell>
-                      </ng-container>
+            <mat-header-cell *matHeaderCellDef> Categorieën </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.categorieen}} </mat-cell>
+          </ng-container>
           <!-- Name Column -->
           <ng-container matColumnDef="adres">
             <mat-header-cell *matHeaderCellDef> Adres </mat-header-cell>
@@ -59,9 +59,9 @@
 
     <mat-tab label="Zomer">
       <mat-form-field>
-                                <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-                              </mat-form-field>
-                                          <div class="wedstrijdDiv">
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      </mat-form-field>
+      <div class="wedstrijdDiv">
         <mat-table [dataSource]="dataSourceZomer" class="mat-elevation-z8">
           <!-- Position Column -->
           <ng-container matColumnDef="wedstrindINfo">
@@ -71,9 +71,9 @@
 
           <!-- Name Column -->
           <ng-container matColumnDef="samenkomst">
-                        <mat-header-cell *matHeaderCellDef> samenkomst </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.samenkomst}} </mat-cell>
-                      </ng-container>
+            <mat-header-cell *matHeaderCellDef> samenkomst </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.samenkomst}} </mat-cell>
+          </ng-container>
           <!-- Name Column -->
           <ng-container matColumnDef="benPup">
             <mat-header-cell *matHeaderCellDef> Ben-Pup </mat-header-cell>
@@ -110,146 +110,146 @@
         </mat-table>
 
         <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
-   </div>
+      </div>
     </mat-tab>
     <mat-tab label="Resultaten">
-<div class="mat-typography">
-<h1>Resultaten Seizoen 2018-2019</h1>
-<h3>46ste Sparta Cross - Zaterdag 23 November</h3>
-<div class="resultdiv">
-<div class="resultIcon"><a href="https://www.sparta-vilvoorde.be/images/cross_23.11.2019.pdf?fbclid=IwAR34Nrnau2lliCv4gvyjCGpcsRgI1v0l1Dm8FjUqSdSKr6Sq0crUB9dQbug" target="_blank"> <mat-icon class="iconBlack" >cloud_download
-</mat-icon></a></div>
-<div class="resultext"><p>Bekijk hier de resultaten van 46ste Sparta Cross</p></div>
-</div>
+      <div class="mat-typography">
+        <h1>Resultaten Seizoen 2018-2019</h1>
+        <h3>46ste Sparta Cross - Zaterdag 23 November</h3>
+        <div class="resultdiv">
+          <div class="resultIcon"><a href="https://www.sparta-vilvoorde.be/images/cross_23.11.2019.pdf?fbclid=IwAR34Nrnau2lliCv4gvyjCGpcsRgI1v0l1Dm8FjUqSdSKr6Sq0crUB9dQbug" target="_blank"> <mat-icon class="iconBlack" >cloud_download
+              </mat-icon></a></div>
+              <div class="resultext"><p>Bekijk hier de resultaten van 46ste Sparta Cross</p></div>
+        </div>
 
-<h3>67ste Grote Prijzen van Duffel - Maandag 17 November</h3>
-<div class="resultdiv">
-<div class="resultIcon"><a href="https://www.duff.be/…/files/20191117_Grote_Prijzen_Dames.pdf" target="_blank"> <mat-icon class="iconBlack" >cloud_download
-</mat-icon></a></div>
-<div class="resultext"><p>Bekijk hier de resultaten van Dames/Femme</p></div>
-</div>
-<div class="resultdiv">
-<div class="resultIcon"><a href="https://www.duff.be/…/files/20191117_Grote_Prijzen_Heren.pdf" target="_blank"> <mat-icon class="iconBlack" >cloud_download
-</mat-icon></a></div>
-<div class="resultext"><p>Bekijk hier de resultaten van Heren/Hommes</p></div>
-</div>
+        <h3>67ste Grote Prijzen van Duffel - Maandag 17 November</h3>
+        <div class="resultdiv">
+          <div class="resultIcon"><a href="https://www.duff.be/…/files/20191117_Grote_Prijzen_Dames.pdf" target="_blank"> <mat-icon class="iconBlack" >cloud_download
+              </mat-icon></a></div>
+              <div class="resultext"><p>Bekijk hier de resultaten van Dames/Femme</p></div>
+        </div>
+        <div class="resultdiv">
+          <div class="resultIcon"><a href="https://www.duff.be/…/files/20191117_Grote_Prijzen_Heren.pdf" target="_blank"> <mat-icon class="iconBlack" >cloud_download
+              </mat-icon></a></div>
+              <div class="resultext"><p>Bekijk hier de resultaten van Heren/Hommes</p></div>
+        </div>
 
-<h3>CrossCup Relays Berlare - Zondag 27 Oktober</h3>
-<div class="resultdiv">
-<div class="resultIcon"><a href="http://www.chronorace.be/Classements/Classement.aspx?eventId=1187107485865488&mode=large&IdClassement=20488" target="_blank"> <mat-icon class="iconBlack" >cloud_download
-</mat-icon></a></div>
-<div class="resultext"><p>Bekijk hier de resultaten van Pupillen jongen / Pupille Garcon</p></div>
-</div>
-<div class="resultdiv">
-<div class="resultIcon"><a href="http://www.chronorace.be/Classements/Classement.aspx?eventId=1187107485865488&mode=large&IdClassement=20489" target="_blank"> <mat-icon class="iconBlack" >cloud_download
-</mat-icon></a></div>
-<div class="resultext"><p>Bekijk hier de resultaten van Pupillen meisjes / Pupille Fille</p></div>
-</div>
-<div class="resultdiv">
-<div class="resultIcon"><a href="http://www.chronorace.be/Classements/Classement.aspx?eventId=1187107485865488&mode=large&IdClassement=20490" target="_blank"> <mat-icon class="iconBlack" >cloud_download
-</mat-icon></a></div>
-<div class="resultext"><p>Bekijk hier de resultaten van Miniemen jongen / Minime Garcon</p></div>
-</div>
-<h3>Adecco Brussels Ekiden - Zaterdag 19 Oktober</h3>
-<div class="resultdiv">
-<div class="resultIcon"><a href="http://prod.chronorace.be/Classements/ListeRapports.aspx?eventId=1187330824164914&lng=NL" target="_blank"> <mat-icon class="iconBlack" >cloud_download
-</mat-icon></a></div>
-<div class="resultext"><p>Bekijk hier de resultaten van Adecco Brussels Ekiden per afstand</p></div>
-</div>
-<h3>Jogging Foyer - Zaterdag 14 September</h3>
-<div class="resultdiv">
-<div class="resultIcon"><a href="https://www.hopasports.com/nl/event/jogging-foyer-2019/results?race=1" target="_blank"> <mat-icon class="iconBlack" >cloud_download
-</mat-icon></a></div>
-<div class="resultext"><p>Bekijk hier de resultaten van Jogging Foyer</p></div>
-</div>
-<h3>Memorial René Ravets - Zaterdag 8 Junie</h3>
-<div class="resultdiv">
-<div class="resultIcon"><a href="../../assets/docs/MemorialReneRavetsPerformances.pdf" target="_blank"> <mat-icon class="iconBlack" >cloud_download
-</mat-icon></a></div>
-<div class="resultext"><p>Bekijk hier de resultaten van Memorial René Ravets</p></div>
-</div>
-<h3>Runners’ Lab Athletics Classic Meeting
-Memorial Vertommen-Cuddy - Zaterdag 11 Mei</h3>
-<div class="resultdiv">
-<div class="resultIcon"><a href="https://www.duff.be/sites/default/files/20190511_Runners%20Lab%20Athletics%20Classic%20Meeting_1.pdf?fbclid=IwAR0ZIUfnR7zwHIMOGSqI_0Vzn5DG6xyvLz05garXgOT8DD8NAE9xaUJYrbs" target="_blank"> <mat-icon class="iconBlack" >cloud_download
-</mat-icon></a></div>
-<div class="resultext"><p>Bekijk hier de resultaten van Meeting
-Memorial Vertommen-Cuddy</p></div>
-</div>
+        <h3>CrossCup Relays Berlare - Zondag 27 Oktober</h3>
+        <div class="resultdiv">
+          <div class="resultIcon"><a href="http://www.chronorace.be/Classements/Classement.aspx?eventId=1187107485865488&mode=large&IdClassement=20488" target="_blank"> <mat-icon class="iconBlack" >cloud_download
+              </mat-icon></a></div>
+              <div class="resultext"><p>Bekijk hier de resultaten van Pupillen jongen / Pupille Garcon</p></div>
+        </div>
+        <div class="resultdiv">
+          <div class="resultIcon"><a href="http://www.chronorace.be/Classements/Classement.aspx?eventId=1187107485865488&mode=large&IdClassement=20489" target="_blank"> <mat-icon class="iconBlack" >cloud_download
+              </mat-icon></a></div>
+              <div class="resultext"><p>Bekijk hier de resultaten van Pupillen meisjes / Pupille Fille</p></div>
+        </div>
+        <div class="resultdiv">
+          <div class="resultIcon"><a href="http://www.chronorace.be/Classements/Classement.aspx?eventId=1187107485865488&mode=large&IdClassement=20490" target="_blank"> <mat-icon class="iconBlack" >cloud_download
+              </mat-icon></a></div>
+              <div class="resultext"><p>Bekijk hier de resultaten van Miniemen jongen / Minime Garcon</p></div>
+        </div>
+        <h3>Adecco Brussels Ekiden - Zaterdag 19 Oktober</h3>
+        <div class="resultdiv">
+          <div class="resultIcon"><a href="http://prod.chronorace.be/Classements/ListeRapports.aspx?eventId=1187330824164914&lng=NL" target="_blank"> <mat-icon class="iconBlack" >cloud_download
+              </mat-icon></a></div>
+              <div class="resultext"><p>Bekijk hier de resultaten van Adecco Brussels Ekiden per afstand</p></div>
+        </div>
+        <h3>Jogging Foyer - Zaterdag 14 September</h3>
+        <div class="resultdiv">
+          <div class="resultIcon"><a href="https://www.hopasports.com/nl/event/jogging-foyer-2019/results?race=1" target="_blank"> <mat-icon class="iconBlack" >cloud_download
+              </mat-icon></a></div>
+              <div class="resultext"><p>Bekijk hier de resultaten van Jogging Foyer</p></div>
+        </div>
+        <h3>Memorial René Ravets - Zaterdag 8 Junie</h3>
+        <div class="resultdiv">
+          <div class="resultIcon"><a href="../../assets/docs/MemorialReneRavetsPerformances.pdf" target="_blank"> <mat-icon class="iconBlack" >cloud_download
+              </mat-icon></a></div>
+              <div class="resultext"><p>Bekijk hier de resultaten van Memorial René Ravets</p></div>
+        </div>
+        <h3>Runners’ Lab Athletics Classic Meeting
+          Memorial Vertommen-Cuddy - Zaterdag 11 Mei</h3>
+        <div class="resultdiv">
+          <div class="resultIcon"><a href="https://www.duff.be/sites/default/files/20190511_Runners%20Lab%20Athletics%20Classic%20Meeting_1.pdf?fbclid=IwAR0ZIUfnR7zwHIMOGSqI_0Vzn5DG6xyvLz05garXgOT8DD8NAE9xaUJYrbs" target="_blank"> <mat-icon class="iconBlack" >cloud_download
+              </mat-icon></a></div>
+              <div class="resultext"><p>Bekijk hier de resultaten van Meeting
+                Memorial Vertommen-Cuddy</p></div>
+        </div>
 
-</div>
+      </div>
     </mat-tab>
     <!--<mat-tab label="inschrijven">
       <div class="inschrijvingDiv">
-        <form   class="formInschrijvingClass">
-          <mat-form-field class="inputHalfLengt">
-            <input matInput placeholder="Naam" id="naam" name="naam" [formControl]="naamFormControl"
-              [errorStateMatcher]="matcher"  required #naam>
-              <mat-error *ngIf="naamFormControl.hasError('required')">
-                Naam is <strong>Verplicht</strong>
-              </mat-error>
-              <mat-error *ngIf="naamFormControl.hasError('whitespace')">Opgepast!! "SPATIES"
-              </mat-error>
-          </mat-form-field>
+      <form   class="formInschrijvingClass">
+      <mat-form-field class="inputHalfLengt">
+      <input matInput placeholder="Naam" id="naam" name="naam" [formControl]="naamFormControl"
+      [errorStateMatcher]="matcher"  required #naam>
+      <mat-error *ngIf="naamFormControl.hasError('required')">
+      Naam is <strong>Verplicht</strong>
+      </mat-error>
+      <mat-error *ngIf="naamFormControl.hasError('whitespace')">Opgepast!! "SPATIES"
+      </mat-error>
+      </mat-form-field>
 
-          <mat-form-field class="inputHalfLengt">
-            <input matInput placeholder="voornaam" id="voorNaamForm" name="voorNaamForm" [formControl]="voorNaamFormControl"
-              [errorStateMatcher]="matcher"   #voorNaamForm  required>
-              <mat-error *ngIf="voorNaamFormControl.hasError('required')">
-                voornaam is <strong>Verplicht</strong>
-              </mat-error>
-              <mat-error *ngIf="voorNaamFormControl.hasError('whitespace')">Opgepast!! "SPATIES"
-              </mat-error>
-          </mat-form-field>
+      <mat-form-field class="inputHalfLengt">
+      <input matInput placeholder="voornaam" id="voorNaamForm" name="voorNaamForm" [formControl]="voorNaamFormControl"
+      [errorStateMatcher]="matcher"   #voorNaamForm  required>
+      <mat-error *ngIf="voorNaamFormControl.hasError('required')">
+      voornaam is <strong>Verplicht</strong>
+      </mat-error>
+      <mat-error *ngIf="voorNaamFormControl.hasError('whitespace')">Opgepast!! "SPATIES"
+      </mat-error>
+      </mat-form-field>
 
-          <mat-form-field class="inputthity">
-             <input matInput [matDatepicker]="picker" placeholder="Geboortedatum" id="geboortedatumInschrijving"
-                  name="geboortedatumInschrijving"  required >
-                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker disabled="false"></mat-datepicker>
-          </mat-form-field>
-          <mat-form-field class="inputthity" floatLabel="never">
-            <input matInput placeholder="Geboortejaar"  id="geboortejaar"
-              name="geboortejaar" [errorStateMatcher]="matcher"  [formControl]="geboorteJaarControl" maxlength=4  type="text" required numbersOnly>
-              <mat-error *ngIf="geboorteJaarControl.hasError('required')">
-                geboortejaar is <strong>Verplicht</strong>
-              </mat-error>
-              <mat-error *ngIf="geboorteJaarControl.hasError('whitespace')">Opgepast!! "SPATIES"
-              </mat-error>
-              <mat-error *ngIf="geboorteJaarControl.hasError('smallerdanfor')">Min 4 Cijfers A.U.B
-              </mat-error>
-            </mat-form-field>
-            <mat-form-field class="inputthity">
-              <input matInput placeholder="Borstnr" id="borstnr" name="borstnr"
-                [errorStateMatcher]="matcher"   #borstnr  type="text" numbersOnly required>
+      <mat-form-field class="inputthity">
+      <input matInput [matDatepicker]="picker" placeholder="Geboortedatum" id="geboortedatumInschrijving"
+      name="geboortedatumInschrijving"  required >
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker disabled="false"></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field class="inputthity" floatLabel="never">
+      <input matInput placeholder="Geboortejaar"  id="geboortejaar"
+      name="geboortejaar" [errorStateMatcher]="matcher"  [formControl]="geboorteJaarControl" maxlength=4  type="text" required numbersOnly>
+      <mat-error *ngIf="geboorteJaarControl.hasError('required')">
+      geboortejaar is <strong>Verplicht</strong>
+      </mat-error>
+      <mat-error *ngIf="geboorteJaarControl.hasError('whitespace')">Opgepast!! "SPATIES"
+      </mat-error>
+      <mat-error *ngIf="geboorteJaarControl.hasError('smallerdanfor')">Min 4 Cijfers A.U.B
+      </mat-error>
+      </mat-form-field>
+      <mat-form-field class="inputthity">
+      <input matInput placeholder="Borstnr" id="borstnr" name="borstnr"
+      [errorStateMatcher]="matcher"   #borstnr  type="text" numbersOnly required>
 
-            </mat-form-field>
+      </mat-form-field>
 
-          <mat-form-field class="inputRadioSelect">
-            <input matInput placeholder="Locatie" id="locatie" name="locatie" [formControl]="locatieFormControl"
-              [errorStateMatcher]="matcher"   #locatie  required>
-              <mat-error *ngIf="locatieFormControl.hasError('required')">
-                Gelieve de <strong>locatie</strong> van de wedrijd in te geven
-              </mat-error>
-              <mat-error *ngIf="locatieFormControl.hasError('whitespace')">Opgepast!! "SPATIES"
-              </mat-error>
-          </mat-form-field>
-          <mat-form-field class="inputRadioSelect">
-            <input matInput placeholder="Dicipline" id="dicipline" name="dicipline" [formControl]="diciplineFormControl"
-              [errorStateMatcher]="matcher"   #dicipline  required>
-              <mat-error *ngIf="locatieFormControl.hasError('required')">
-               Gelieve een dicipline in te geven!
-              </mat-error>
-              <mat-error *ngIf="locatieFormControl.hasError('whitespace')">Opgepast!! "SPATIES"
-              </mat-error>
-          </mat-form-field>
+      <mat-form-field class="inputRadioSelect">
+      <input matInput placeholder="Locatie" id="locatie" name="locatie" [formControl]="locatieFormControl"
+      [errorStateMatcher]="matcher"   #locatie  required>
+      <mat-error *ngIf="locatieFormControl.hasError('required')">
+      Gelieve de <strong>locatie</strong> van de wedrijd in te geven
+      </mat-error>
+      <mat-error *ngIf="locatieFormControl.hasError('whitespace')">Opgepast!! "SPATIES"
+      </mat-error>
+      </mat-form-field>
+      <mat-form-field class="inputRadioSelect">
+      <input matInput placeholder="Dicipline" id="dicipline" name="dicipline" [formControl]="diciplineFormControl"
+      [errorStateMatcher]="matcher"   #dicipline  required>
+      <mat-error *ngIf="locatieFormControl.hasError('required')">
+      Gelieve een dicipline in te geven!
+      </mat-error>
+      <mat-error *ngIf="locatieFormControl.hasError('whitespace')">Opgepast!! "SPATIES"
+      </mat-error>
+      </mat-form-field>
 
-          <button mat-raised-button class="formButton" type="submit"(click)="wedstrijdInschrijving()"  color="primary">Inschrijven</button>
+      <button mat-raised-button class="formButton" type="submit"(click)="wedstrijdInschrijving()"  color="primary">Inschrijven</button>
 
-        </form>
+      </form>
 
       </div>
 
-    </mat-tab>-->
+      </mat-tab>-->
   </mat-tab-group>
 </div>
