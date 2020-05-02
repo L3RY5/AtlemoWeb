@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import {MatButtonModule}from '@angular/material/button';
-import {MatNativeDateModule}from '@angular/material';
+import { MatNativeDateModule } from '@angular/material/core';
 import {MatIconModule}from '@angular/material/icon';
 import { HttpClientModule } from "@angular/common/http";
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -19,7 +19,7 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatSidenavModule } from "@angular/material";
+import { MatSidenavModule } from "@angular/material/sidenav";
 import { FlexLayoutModule } from "@angular/flex-layout";
 
 

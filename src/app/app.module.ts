@@ -74,7 +74,6 @@ const routes: Routes = [
       FormsModule, ReactiveFormsModule,NgbModule,
       NgbPaginationModule, NgbAlertModule,
       MatSnackBarModule,
-      NgbModule.forRoot()
   ],
   exports:[],
   providers: [{provide: LOCALE_ID, useValue: 'nl'}],

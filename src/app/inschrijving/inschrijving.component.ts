@@ -12,12 +12,7 @@ import {
 
 from '@angular/material/core';
 
-import {
-  MatStepper,
-  MatHorizontalStepper
-}
-
-from '@angular/material';
+import { MatStepper, MatHorizontalStepper } from '@angular/material/stepper';
 
 import {
   MAT_MOMENT_DATE_FORMATS,
@@ -110,11 +105,7 @@ viewValue: string;
   step2Completed = false;
   step3Completed = false;
 
-  @ViewChild(MatStepper, {
-      static: false
-    }
-
-  ) stepper: MatStepper;
+  @ViewChild(MatStepper) stepper: MatStepper;
 
 
   /*Validators*/

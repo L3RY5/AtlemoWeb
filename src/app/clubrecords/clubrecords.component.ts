@@ -1,5 +1,6 @@
 import { Component, OnInit,ViewChild,ViewChildren, AfterViewInit, QueryList} from '@angular/core';
-import { MatTableDataSource,MatPaginator } from '@angular/material/';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
 
 export interface ClubRecordsInt {
   discipline: string;

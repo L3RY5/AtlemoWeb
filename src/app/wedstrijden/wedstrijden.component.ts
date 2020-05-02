@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild,ViewChildren, AfterViewInit, QueryList } from '@angular/core';
-import { MatTableDataSource,MatPaginator } from '@angular/material/';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
 import {ErrorStateMatcher}from '@angular/material/core';
 import {MAT_MOMENT_DATE_FORMATS,MomentDateAdapter}from '@angular/material-moment-adapter';
 import {DateAdapter,MAT_DATE_FORMATS,MAT_DATE_LOCALE}from '@angular/material/core';
