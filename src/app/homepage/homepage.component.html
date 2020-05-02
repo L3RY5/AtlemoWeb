@@ -10,9 +10,10 @@
       <article class="news_entry">
         <h3>{{ entry.title }}</h3>
         <div class="image">
-          <a href="{{ entry.album_url }}" target="_blank">
+          <a *ngIf="entry.album_url" href="{{ entry.album_url }}" target="_blank">
             <img src="{{ entry.img }}" />
           </a>
+          <img *ngIf="!(entry.album_url)" src="{{ entry.img }}" />
         </div>
         <time datetime="{{ entry.date }}">
           {{ entry.date | date:'mediumDate' }}
