@@ -29,7 +29,8 @@ export class HomepageComponent implements OnInit {
       'collapsed': true,
     },
     {
-      'title': '46ste Sparta Cross 23/11',
+      'title': '46ste Sparta Cross',
+      'date': '2019-11-23',
       'img': 'assets/img/drieFontain.jpg',
       'results_url': 'https://www.sparta-vilvoorde.be/images/cross_23.11.2019.pdf',
       'album_url': 'https://photos.app.goo.gl/7JsGABy6uHDUHNyY8',
@@ -40,7 +41,8 @@ export class HomepageComponent implements OnInit {
       'collapsed': true,
     },
     {
-      'title': '67ste Grote Prijzen van Duffel 17/11',
+      'title': '67ste Grote Prijzen van Duffel',
+      'date': '2019-11-17',
       'img': 'assets/img/duffelDrieMusk.jpg',
       'results_url': 'https://www.duff.be/…/files/20191117_Grote_Prijzen_Heren.pdf',
       'album_url' : 'https://photos.app.goo.gl/KEuQu19PuXZrSTGq9',
@@ -51,11 +53,12 @@ export class HomepageComponent implements OnInit {
       'collapsed': true,
     },
     {
-      'title': 'Jogging van de vrede op 11/11',
+      'title': 'Jogging van de vrede',
+      'date': '2019-11-11',
       'img': 'assets/img/jogginPaix.jpg',
       'results_url': '',
       'album_url' : 'https://photos.app.goo.gl/wjN9MUHFQDiPkvDi7',
-      'text': "Mooie dag voor atlemo ondanks de regen.",
+      'text': "Mooie dag voor Atlemo ondanks de regen.",
       'more_text': "Een dertigtal atleten namen deel aan deze jogging met zes podiumplaatsen als resultaat.  Très belle journée pour Atlemo, trentaine d’athlètes ont participés à ce jogging et 6 podium au total.\n\
               1ère place : Adam 500m\n\
               Moussa 4 km\n\
@@ -67,7 +70,8 @@ export class HomepageComponent implements OnInit {
       'collapsed': true,
     },
     {
-      'title': 'Cross Braine L’alleud op 9/11',
+      'title': 'Cross Braine L’alleud',
+      'date': '2019-11-09',
       'img': 'assets/img/crossBrain.jpg',
       'results_url': '',
       'album_url' : 'https://photos.app.goo.gl/ryhyH3QD1cxsr41w7',
@@ -76,7 +80,8 @@ export class HomepageComponent implements OnInit {
       'collapsed': true,
     },
     {
-      'title': 'Cross Cup Relays in Berlare op 27/10',
+      'title': 'Cross Cup Relays in Berlare',
+      'date': '2019-10-27',
       'img': 'assets/img/relay2019.jpg',
       'results_url': 'http://www.chronorace.be/Classements/Classement.aspx?eventId=1187107485865488&mode=large&IdClassement=20488',
       'album_url' : 'https://photos.app.goo.gl/ySMLSM1tZgEEkn1j8',
@@ -85,7 +90,8 @@ export class HomepageComponent implements OnInit {
       'collapsed': true,
     },
     {
-      'title': 'Meeting in Vorst op 8/6',
+      'title': 'Meeting in Vorst',
+      'date': '2019-06-08',
       'img': 'assets/img/ismaelaW.jpg',
       'results_url': 'assets/docs/MemorialReneRavetsPerformances.pdf',
       'album_url' : 'https://photos.app.goo.gl/JN8khbW2AdUy8arU7',
@@ -94,7 +100,8 @@ export class HomepageComponent implements OnInit {
       'collapsed': true,
     },
     {
-      'title': 'Meeting in Duffel op 11/5',
+      'title': 'Meeting in Duffel',
+      'date': '2019-05-11',
       'img': 'assets/img/60260600_2585361131492908_8079722426042155008_n.jpg',
       'results_url': 'https://www.duff.be/sites/default/files/20190511_Runners%20Lab%20Athletics%20Classic%20Meeting_1.pdf',
       'album_url' : 'https://photos.app.goo.gl/UhmcyuYrFK2AdghJ6',
@@ -104,6 +111,7 @@ export class HomepageComponent implements OnInit {
     },
     {
       'title': 'Opleiding Aspirant-Initiator Atletiek',
+      'date': '2019-05-05',
       'img': 'assets/img/aspIni.jpg',
       'results_url': '',
       'album_url' : '',
@@ -113,6 +121,7 @@ export class HomepageComponent implements OnInit {
     },
     {
       'title': 'Dag van de arbeid',
+      'date': '2019-05-01',
       'img': 'assets/img/dagArbeid.jpg',
       'results_url': '',
       'album_url' : '',
