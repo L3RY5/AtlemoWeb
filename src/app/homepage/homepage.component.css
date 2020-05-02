@@ -5,15 +5,26 @@
   font-family: "Times New Roman", Times, serif;
 }
 
-.firstODivide {
+section.news header,
+section.events header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+section.news header mat-divider,
+section.events header mat-divider {
   width: 100%;
   margin-bottom: 3em;
   box-shadow: 0px 5px 0px rgb(185, 185, 185);
   background-color: rgb(185, 185, 185);
 }
 
-/* Articles */
-.articleDiv {
+/* Actualiteit feed */
+section.news {
   border-left: thin solid rgb(185, 185, 185);
   border-right: thin solid rgb(185, 185, 185);
   border-bottom: thin solid rgb(185, 185, 185);
@@ -23,27 +34,19 @@
   box-shadow: 2px 2px 5px rgb(173, 173, 173);
 }
 
-.storyArticleHead {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.storyArticle {
+section.news article {
   width: 100%;
   height: auto;
   display: grid;
   grid-template-columns: 40% 60%;
   grid-template-areas:
-    "photo date"
-    "photo text";
+    "date header"
+    "photo text"
+    "photo results";
   justify-content: center;
 }
 
-.articleFoto {
+article.news_entry div.image {
   width: 11em;
   height: 10em;
   padding-top: 0.5em;
@@ -51,12 +54,12 @@
   justify-self: center;
 }
 
-.fotoArticle {
+article.news_entry div.image img {
   width: 100%;
   height: 80%;
 }
 
-.articletext {
+article.news_entry section.text {
   height: 100%;
   padding-left: 1em;
   padding-right: 1em;
@@ -64,34 +67,47 @@
   grid-area: text;
 }
 
-.storyArticle .articletext h3 {
+article.news_entry h3 {
   font-size: 20px;
   font-weight: bold;
+  padding-left: 1em;
+  padding-right: 1em;
+  grid-area: header;
 }
 
-.articledate {
+article.news_entry time {
   grid-area: date;
   padding-left: 1em;
   padding-right: 1em;
+  justify-self: center;
 }
 
-.meerMinder {
-  font-size: 1vw;
+article.news_entry section.results {
+  grid-area: results;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  margin-left: 1em;
+  margin-right: 1em;
   margin-bottom: 1em;
+}
+
+section.results div.albumicon {
+  width: 2.5em;
+  height: auto;
+  padding-left: 0.5em;
+}
+
+section.results button {
+  font-size: 1vw;
   height: auto;
   margin-right: 1em;
   width: auto;
 }
 
-.meerMinder2 {
-  font-size: 1vw;
-  margin-bottom: 1em;
-  height: auto;
-  width: auto;
-}
-
 /* Events */
-.eventsDiv {
+section.events {
   width: 30%;
   height: 50%;
   margin-left: 2em;
@@ -119,19 +135,6 @@ mat-divider {
   margin: 0 auto;
 }
 
-.resultdiv {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-}
-
-.resultIcon {
-  width: 2.5em;
-  height: auto;
-  padding-left: 0.5em;
-}
-
 .eventInfo a {
   color: rgb(51, 37, 241);
 }
@@ -147,15 +150,14 @@ mat-divider {
     flex-direction: column;
   }
 
-  .articleDiv,
-  .eventsDiv {
+  section.news,
+  section.events {
     width: 100%;
     margin-bottom: 1em;
     margin-left: 0em;
   }
 
-  .meerMinder,
-  .meerMinder2 {
+  section.results button {
     font-size: 2.5vw;
     padding-left: 0px;
   }
@@ -168,12 +170,14 @@ mat-divider {
 
 /* media tot 500px */
 @media screen and (max-width: 500px) {
-  .storyArticle {
+  section.news article {
     grid-template-columns: none;
     grid-template-areas:
       "photo"
+      "header"
       "date"
-      "text";
+      "text"
+      "results";
   }
 }
 
@@ -183,8 +187,8 @@ mat-divider {
     flex-direction: column;
   }
 
-  .articleDiv,
-  .eventsDiv {
+  section.news,
+  section.events {
     width: 95%;
     margin-bottom: 1em;
     margin-left: 0em;
@@ -192,8 +196,7 @@ mat-divider {
     margin-top: 1em;
   }
 
-  .meerMinder,
-  .meerMinder2 {
+  section.results button {
     font-size: 2.5vw;
     padding-left: 0.5px;
   }
@@ -214,8 +217,8 @@ mat-divider {
     flex-direction: column;
   }
 
-  .articleDiv,
-  .eventsDiv {
+  section.news,
+  section.events {
     width: 95%;
     margin-bottom: 1em;
     margin-left: 0em;
@@ -223,22 +226,21 @@ mat-divider {
     margin-top: 1em;
   }
 
-  .meerMinder,
-  .meerMinder2 {
+  section.results button {
     font-size: 12px;
   }
 }
 
 /*media van 701 tot 800px*/
 @media screen and (min-width: 701px) and (max-width: 800px) {
-  .articleDiv {
+  section.news {
     width: 60%;
     margin-bottom: 1em;
     margin-left: 0em;
     margin-top: 1em;
   }
 
-  .eventsDiv {
+  section.events {
     width: 40%;
     margin-bottom: 1em;
     margin-left: 0em;
@@ -248,14 +250,14 @@ mat-divider {
 
 /*media van 801 tot 1000px*/
 @media screen and (min-width: 801px) and (max-width: 1000px) {
-  .articleDiv {
+  section.news {
     width: 60%;
     margin-bottom: 1em;
     margin-left: 0em;
     margin-top: 1em;
   }
 
-  .eventsDiv {
+  section.events {
     width: 40%;
     margin-bottom: 1em;
     margin-left: 1em;

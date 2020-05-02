@@ -1,53 +1,52 @@
 <div class=bodyPageDive>
 
   <!-- begin div met alle artikels -->
-  <div class="articleDiv">
-    <div class="storyArticleHead">
+  <section class="news">
+    <header>
       <h2>Actualiteit</h2>
-      <mat-divider class="firstODivide"></mat-divider>
-    </div>
+      <mat-divider></mat-divider>
+    </header>
     <ng-template ngFor let-entry [ngForOf]="entries">
-      <div class="storyArticle">
-        <div class="articleFoto">
+      <article class="news_entry">
+        <h3>{{ entry.title }}</h3>
+        <div class="image">
           <a href="{{ entry.album_url }}" target="_blank">
-            <img src="{{ entry.img }}" class="fotoArticle" />
+            <img src="{{ entry.img }}" />
           </a>
         </div>
-        <div class="articledate">
-          <p>
+        <time datetime="{{ entry.date }}">
           {{ entry.date }}
-          </p>
-        </div>
-        <div class="articletext">
-          <h3>{{ entry.title }}</h3>
+        </time>
+        <section class="text">
           <p>{{ entry.text }}
             <span *ngIf="!entry.collapsed" style="white-space: pre-line">
               {{ entry.more_text }}
             </span>
           </p>
-          <div class="resultdiv">
-            <button (click)="entry.collapsed = !entry.collapsed" mat-stroked-button class="meerMinder">Meer/Minder</button>
-            <a *ngIf="entry.results_url" href="{{ entry.results_url }}" target="_blank"><button mat-stroked-button class="meerMinder2">Uitslagen</button></a>
-            <div *ngIf="entry.album_url" class="resultIcon">
-              <a href="{{ entry.album_url }}">
-                <img src="./../../assets/img/icons8-photo-gallery-30.png">
-              </a>
-            </div>
+        </section>
+        <section class="results">
+          <div>
+          <button (click)="entry.collapsed = !entry.collapsed" mat-stroked-button>Meer/Minder</button>
           </div>
-        </div>
-      </div>
+          <a *ngIf="entry.results_url" href="{{ entry.results_url }}" target="_blank"><button mat-stroked-button>Uitslagen</button></a>
+          <div *ngIf="entry.album_url" class="albumicon">
+            <a href="{{ entry.album_url }}">
+              <img src="./../../assets/img/icons8-photo-gallery-30.png">
+            </a>
+          </div>
+        </section>
+      </article>
       <mat-divider></mat-divider>
     </ng-template>
-  </div> <!-- END div.articleDiv -->
+  </section> <!-- END section.news -->
+
 
   <!-- Begin div met alle Events -->
-
-
-  <div class="eventsDiv">
-
-    <h2 style="text-align: center;">Events</h2>
-    <mat-divider class="firstODivide"></mat-divider>
-
+  <section class="events">
+    <header>
+      <h2>Events</h2>
+      <mat-divider></mat-divider>
+    </header>
 
     <!--  event 3 -->
     <div class="eventInfo">
@@ -92,6 +91,6 @@
     <mat-divider></mat-divider>
 
     <mat-divider></mat-divider>
-  </div>
-  <!-- Einde div met alle Events -->
+  </section>
+  <!-- Einde section.events -->
 </div>
