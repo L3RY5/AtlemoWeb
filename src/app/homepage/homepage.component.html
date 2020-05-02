@@ -15,7 +15,7 @@
           </a>
         </div>
         <time datetime="{{ entry.date }}">
-          {{ entry.date }}
+          {{ entry.date | date:'mediumDate' }}
         </time>
         <section class="text">
           <p>{{ entry.text }}

@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA  } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { registerLocaleData } from '@angular/common';
+import localeNl from '@angular/common/locales/nl';
+import {LOCALE_ID} from '@angular/core';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -23,10 +26,11 @@ import { OrganisatieComponent } from './organisatie/organisatie.component';
 import { MultimediaComponent } from './multimedia/multimedia.component';
 
 
+registerLocaleData(localeNl, 'nl');
 
 const routes: Routes = [
-  { path: '', 
-    redirectTo:"/home",
+  { path: '',
+    redirectTo:'/home',
     pathMatch: 'full' },
   { path: 'home', component: HomepageComponent },
   { path: 'contact', component: ContactComponent },
@@ -40,10 +44,8 @@ const routes: Routes = [
   { path: 'clubrecords', component: ClubrecordsComponent },
   { path: 'links', component: LinksComponent },
   { path: '**',
-    redirectTo:"/home",
+    redirectTo:'/home',
     pathMatch: 'full' },
-  
- 
 ];
 
 @NgModule({
@@ -73,16 +75,14 @@ const routes: Routes = [
       NgbPaginationModule, NgbAlertModule,
       MatSnackBarModule,
       NgbModule.forRoot()
-     
-  
-   
-  ],exports:[],
-  providers: [],
+  ],
+  exports:[],
+  providers: [{provide: LOCALE_ID, useValue: 'nl'}],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
     NO_ERRORS_SCHEMA
   ]
 })
-export class AppModule { }
 
+export class AppModule { }
