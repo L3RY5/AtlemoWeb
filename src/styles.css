@@ -35,6 +35,10 @@ svg {
   height: 4em;
 }
 
+.navHeader mat-toolbar {
+  flex-wrap: nowrap;
+}
+
 .navHeaderKlein {
   /*   border: black ridge; */
   display: none;
@@ -190,8 +194,8 @@ body {
     font-size: 0.7rem;
 
 }*/
-/*media tot 500px*/
-@media screen and (max-width: 500px) {
+/*media tot 600px*/
+@media screen and (max-width: 600px) {
   #testMenu {
     display: none;
   }
@@ -243,18 +247,13 @@ body {
   .footerDive {
     margin-top: 1em;
   }
-}
 
-.navHeaderKlein {
-  /*   border: black ridge; */
-  display: block;
-}
-
-.spanNave {
-  padding-right: 0px;
-  color: white;
-  width: auto;
-  font-size: 0.7rem;
+  .spanNave {
+    padding-right: 0px;
+    color: white;
+    width: auto;
+    font-size: 0.7rem;
+  }
 }
 
 /*media van 501 tot 600px*/
@@ -271,10 +270,10 @@ body {
   .footerDive {
     margin-top: 1em;
   }
-}
 
-.spanNave {
-  padding-right: 0rem;
+  .spanNave {
+    padding-right: 0rem;
+  }
 }
 
 
