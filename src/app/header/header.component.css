@@ -1,12 +1,4 @@
-.headerFoto {
-  height: 25em;
-  width: 90em;
-}
-
-.carousel-caption {
-  margin: 0 auto;
-}
-
+/* Carousel */
 .mainImg {
   display: flex;
   flex-direction: row;
@@ -21,20 +13,34 @@
   height: 300px;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-end;
   overflow: hidden;
 }
 
-.imgHeaderLogo {
-  height: 100%;
-  width: 40%;
+.headerFoto {
+  min-height: 300px;
+  width: 1200px;
+}
+
+.carousel-caption {
+  margin: 0 auto;
 }
 
 .headerIcon {
   color: white;
   margin-left: 1em;
 }
+
+.naamClubDia {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.atlemoKorter {
+  display: none;
+}
+/* END Carousel */
 
 .socialMediaHeader {
   width: 100%;
@@ -50,21 +56,11 @@
   max-width: 70px;
 }
 
-.naamClubDia {
-  font-size: 30px;
-  font-weight: bolder;
-}
-
-.atlemoKorter {
-  display: none;
-}
-
 
 /*tot 300px*/
 @media screen and (max-width: 300px) {
   .headerFoto {
-    height: 20em;
-    width: 25em;
+    width: 300px;
   }
 
   .naamClubDia {
@@ -74,11 +70,9 @@
 
 
 /*media van 301 tot 400px*/
-@media screen and (min-width: 301px)and (max-width: 400px) {
+@media screen and (min-width: 301px) and (max-width: 400px) {
   .headerFoto {
-    height: 20em;
-    width: 30em;
-
+    width: 400px;
   }
 
   .naamClubDia {
@@ -114,16 +108,14 @@
 /*media van 401 tot 500px*/
 @media screen and (min-width: 401px) and (max-width: 500px) {
   .headerFoto {
-    height: 25em;
-    width: 32em;
+    width: 500px;
   }
 }
 
 /*media van 501 tot 600px*/
 @media screen and (min-width: 501px) and (max-width: 600px) {
   .headerFoto {
-    height: 30em;
-    width: 37em;
+    width: 600px;
   }
 }
 
@@ -137,8 +129,7 @@
 /*media van 601 tot 700px*/
 @media screen and (min-width: 601px) and (max-width: 700px) {
   .headerFoto {
-    height: 25em;
-    width: 44em;
+    width: 700px;
   }
 
 }
@@ -146,112 +137,20 @@
 /*media van 701 tot 800px*/
 @media screen and (min-width: 701px) and (max-width: 800px) {
   .headerFoto {
-    height: 25em;
-    width: 50em;
-  }
-
-}
-
-/*media van 801 tot 900px*/
-@media screen and (min-width: 801px) and (max-width: 900px) {
-  .headerFoto {
-    height: 25em;
-    width: 60em;
+    width: 800px;
   }
 }
 
-/*media van 901 tot 1000px*/
-@media screen and (min-width: 901px) and (max-width: 1000px) {
+/*media van 801 tot 1000px*/
+@media screen and (min-width: 801px) and (max-width: 1000px) {
   .headerFoto {
-    height: 25em;
-    width: 63em;
+    width: 1000px;
   }
 }
 
-/*media van 1001 tot 1100px*/
-@media screen and (min-width: 1001px) and (max-width: 1100px) {
+/*media van 1001 tot 1200px*/
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
   .headerFoto {
-    height: 25em;
-    width: 70em;
-  }
-}
-
-/*media van 1101 tot 1200px*/
-@media screen and (min-width: 1101px) and (max-width: 1200px) {
-  .headerFoto {
-    height: 25em;
-    width: 75em;
-  }
-}
-
-/*media van 1201 tot 1300px*/
-@media screen and (min-width: 1201px) and (max-width: 1300px) {
-  .headerFoto {
-    height: 25em;
-    width: 80em;
-  }
-}
-
-/*media van 1301 tot 1400px*/
-@media screen and (min-width: 1301px) and (max-width: 1400px) {
-  .headerFoto {
-    height: 25em;
-    width: 85em;
-  }
-}
-
-/*media vanaf 1500 tot  1600*/
-@media screen and (min-width: 1500px)and (max-width: 1600px) {
-  .headerFoto {
-    height: 30em;
-    width: 100em;
-  }
-}
-
-/*media vanaf 1601 tot  1700*/
-@media screen and (min-width: 1601px)and (max-width: 1700px) {
-  .headerFoto {
-    height: 40em;
-    width: 105em;
-  }
-}
-
-/*media vanaf 1701 tot  1800*/
-@media screen and (min-width: 1701px)and (max-width: 1800px) {
-  .headerFoto {
-    height: 30em;
-    width: 110em;
-  }
-}
-
-/*media vanaf 1801 tot  1900*/
-@media screen and (min-width: 1801px)and (max-width: 1900px) {
-  .headerFoto {
-    height: 30em;
-    width: 115em;
-  }
-}
-
-/*media vanaf 1901 tot  2000*/
-@media screen and (min-width: 1901px)and (max-width: 2000px) {
-  .headerFoto {
-    height: 30em;
-    width: 120em;
-  }
-}
-
-/*media vanaf 2001 tot  2100*/
-@media screen and (min-width: 2001px)and (max-width: 2100px) {
-  .headerFoto {
-    height: 30em;
-    width: 125em;
-  }
-}
-
-/*media vanaf 2101 tot  2200*/
-@media screen and (min-width: 2101px)and (max-width: 2200px) {
-  .headerFoto {
-    height: 30em;
-    width: 130em;
+    width: 1200px;
   }
 }

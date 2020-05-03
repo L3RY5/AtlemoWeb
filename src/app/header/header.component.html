@@ -29,11 +29,10 @@
   <div class="mainImg">
     <div class=imgHeader>
 
-      <ngb-carousel *ngIf="images" [showNavigationIndicators]="false">
+      <ngb-carousel *ngIf="images" [showNavigationIndicators]="false" [showNavigationArrows]="false">
         <ng-template ngbSlide *ngFor="let image of images">
 
           <picture>
-            <source media="(min-width: 1200px)" [srcset]="image[8]">
             <source media="(min-width: 1000px)" [srcset]="image[7]">
             <source media="(min-width: 800px)" [srcset]="image[6]">
             <source media="(min-width: 700px)" [srcset]="image[5]">

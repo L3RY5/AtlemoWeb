@@ -9,20 +9,19 @@ import { Component, OnInit } from '@angular/core';
 
 export class HeaderComponent implements OnInit {
   sizes = [
-    '',
-    'px300',
-    'px400',
-    'px500',
-    'px600',
-    'px700',
-    'px800',
-    'px1000',
-    'px1200'
+    '300px',
+    '400px',
+    '500px',
+    '600px',
+    '700px',
+    '800px',
+    '1000px',
+    '1200px'
   ];
   images = [
-    this.sizes.map((size) => `../../assets/img/header-covers/header1${size}.jpg`),
-    this.sizes.map((size) => `../../assets/img/header-covers/header2${size}.jpg`),
-    this.sizes.map((size) => `../../assets/img/header-covers/headerMemoriaal${size}.jpg`),
+    this.sizes.map((size) => `../../assets/img/header-covers/brussel-ekiden-2018.${size}.jpg`),
+    this.sizes.map((size) => `../../assets/img/header-covers/groepsfoto-2018.${size}.jpg`),
+    this.sizes.map((size) => `../../assets/img/header-covers/memorial-van-damme.${size}.jpg`),
   ];
 
   constructor() { }
