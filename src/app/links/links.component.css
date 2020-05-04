@@ -1,67 +1,94 @@
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+  font-weight: lighter;
+}
 
-h1{
-   
-    font-family: "Times New Roman", Times, serif;
-    font-size: 25px;
-    font-weight: lighter;
-    
+h3 {
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 3em;
+  font-size: 17px;
 }
-h3{
-    font-weight: bold;
-    font-style: italic;
-	margin-top: 3em;
-	font-size: 17px;
+
+h4 {
+  font-style: italic;
+  text-decoration: underline;
+  font-size: 14px;
 }
-h4{
-	font-style: italic;
-	text-decoration: underline;
-	font-size: 14px;
+
+.mat-typography {
+  height: 100%;
+  padding-top: 1em;
+  margin: 0 auto;
+  width: 50%;
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  flex-direction: column;
 }
-.mat-typography{ height: 100%;padding-top:1em; margin:0 auto; width: 50%;  font-family: "Times New Roman", Times, serif; display: flex;flex-direction: column;}
-.mainLinks{width: 100%;height: 5em;border-top: ridge thin rgb(163, 163, 163);border-bottom: ridge rgb(163, 163, 163) 1px;display: flex;flex-direction: row;padding-top: 1em;padding-bottom: 1em;}
-.mainLinks:hover{background-color:  rgba(230, 230, 230, 0.959);}
-.logoLinks{width: 20%; height: 100%;}
-.textLinks{width: 70%; height: 100%;margin-left: 1em;}
-.textLinks a{ color: rgb(51, 37, 241);font-size: 15px;}
-.textLinks p{ font-size: 17px;}
+
+.mainLinks {
+  width: 100%;
+  height: 5em;
+  border-top: ridge thin rgb(163, 163, 163);
+  border-bottom: ridge rgb(163, 163, 163) 1px;
+  display: flex;
+  flex-direction: row;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.mainLinks:hover {
+  background-color: rgba(230, 230, 230, 0.959);
+}
+
+.logoLinks {
+  width: 20%;
+  height: 100%;
+}
+
+.textLinks {
+  width: 70%;
+  height: 100%;
+  margin-left: 1em;
+}
+
+.textLinks a {
+  color: rgb(51, 37, 241);
+  font-size: 15px;
+}
+
+.textLinks p {
+  font-size: 17px;
+}
 
 /*media tot 400px*/
-@media screen and (max-width: 400px){
-   .mainLinks{height: auto;}
-    
-       }
-       
-       /*media van 401 tot 500px*/
-       @media screen and (min-width: 401px) and (max-width: 500px){
-        .mainLinks{height: 8em;}
-         
-       }
-       
-       /*media van 501 tot 600px*/
-       @media screen and (min-width: 501px) and (max-width: 600px){
-        
-        }
-       
-       /*media van 601 tot 700px*/
-       @media screen and (min-width: 601px) and (max-width: 700px){
-        
-       }
-       
-       /*media van 701 tot 800px*/
-       @media screen and (min-width: 701px) and (max-width: 800px){
-        
-       }
-       
-       /*media van 801 tot 1000px*/
-       @media screen and (min-width: 801px) and (max-width: 1000px){
-         
-         
- 
-       }
-     
-       /*media van 1001 tot 1200px*/
-       @media screen and (min-width: 1001px) and (max-width: 1200px){
-        
-        
-     
-       }
+@media screen and (max-width: 400px) {
+  .mainLinks {
+    height: auto;
+  }
+
+}
+
+/*media van 401 tot 500px*/
+@media screen and (min-width: 401px) and (max-width: 500px) {
+  .mainLinks {
+    height: 8em;
+  }
+
+}
+
+/*media van 501 tot 600px*/
+@media screen and (min-width: 501px) and (max-width: 600px) {}
+
+/*media van 601 tot 700px*/
+@media screen and (min-width: 601px) and (max-width: 700px) {}
+
+/*media van 701 tot 800px*/
+@media screen and (min-width: 701px) and (max-width: 800px) {}
+
+/*media van 801 tot 1000px*/
+@media screen and (min-width: 801px) and (max-width: 1000px) {}
+
+/*media van 1001 tot 1200px*/
+@media screen and (min-width: 1001px) and (max-width: 1200px) {}

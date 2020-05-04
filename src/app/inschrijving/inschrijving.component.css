@@ -1,70 +1,131 @@
-.boyPageDive{}
+.boyPageDive {}
+
 /*inschrijving stepper gedeelte*/
-.inschrijvingDiv{width: 70%;height: 50em;margin:0 auto;}
-.formInschrijvingClass{width: 80%;height: auto;display: flex;flex-direction: row;flex-wrap: wrap;}
-.inputHalfLengt{width: 45%; margin-left: 1em;}
-.inputRadioSelect{width: 30%; margin-left: 1em;margin-right: 3em;}
-.inputthity{width: 20%; margin-left: 1em;}
-.formButton{width: 30%;margin:  0 auto ;margin-top: 2em;}
+.inschrijvingDiv {
+  width: 70%;
+  height: 50em;
+  margin: 0 auto;
+}
+
+.formInschrijvingClass {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.inputHalfLengt {
+  width: 45%;
+  margin-left: 1em;
+}
+
+.inputRadioSelect {
+  width: 30%;
+  margin-left: 1em;
+  margin-right: 3em;
+}
+
+.inputthity {
+  width: 20%;
+  margin-left: 1em;
+}
+
+.formButton {
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 2em;
+}
 
 
 .example-radio-group {
-    display: flex;
-    flex-direction: row;
-    margin: 15px 0;
-  }
-  
-  .example-radio-button {
-    margin: 5px;
-  }
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
 
 /*Medische stepper gedeelte*/
-.MEdisheDive{width: 85%;height:auto;display: flex;
-    flex-direction: column;margin: 0 auto;font-family: "Times New Roman", Times, serif;}
-    .medishText{width: 100%;height: auto; display: flex;
-        flex-direction: row;flex-wrap: wrap;margin-top: 2.5em;}
-    .confirMedish{width: 100%;height: auto; /* border: blue ridge; */}
+.MEdisheDive {
+  width: 85%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  font-family: "Times New Roman", Times, serif;
+}
 
-    .preventiefKaders {
-        width: 50%;
-        height:auto;
-        background-color: white;
-        font-family: "Times New Roman", Times, serif;
-       
-      
-    }
-    
-    .zwarteAchtergrongMetWitteTekst {
-        background-color: black;
-        color: white;
-        height: 2em;
-        width: 100%;
-        text-align: center;
-        font-family: "Times New Roman", Times, serif;
-       /*  border: red ridge; */
-       
-    }
-    .witteAchterGrondZwateText{
-       font-weight: bold;
-        height: 2em;
-        width: 100%;
-        font-family: "Times New Roman", Times, serif;
-        text-align: center;border-bottom: black thin ridge;
-         font-size: 14px;}
-    .gelezenEnBegrepen{
-        height: 5em;
-        width: 100%;
-        padding-top: 2em;
-      /*   border: magenta ridge; */
-        font-family: "Times New Roman", Times, serif;
-        text-align: center;
-        font-size: 14px;
-    }
-    .confirmMedis{  height: 5em;
-        width: 100%;font-family: "Times New Roman", Times, serif;   text-align: center;}
+.medishText {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 2.5em;
+}
+
+.confirMedish {
+  width: 100%;
+  height: auto;
+  /* border: blue ridge; */
+}
+
+.preventiefKaders {
+  width: 50%;
+  height: auto;
+  background-color: white;
+  font-family: "Times New Roman", Times, serif;
 
 
-        /*Confirmatie stepper gedeelte*/
-        .confirmDiv{width: 80%;height: 10em; margin: 0 auto;text-align: center;padding-top:5em;}
+}
 
-       
+.zwarteAchtergrongMetWitteTekst {
+  background-color: black;
+  color: white;
+  height: 2em;
+  width: 100%;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  /*  border: red ridge; */
+
+}
+
+.witteAchterGrondZwateText {
+  font-weight: bold;
+  height: 2em;
+  width: 100%;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  border-bottom: black thin ridge;
+  font-size: 14px;
+}
+
+.gelezenEnBegrepen {
+  height: 5em;
+  width: 100%;
+  padding-top: 2em;
+  /*   border: magenta ridge; */
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 14px;
+}
+
+.confirmMedis {
+  height: 5em;
+  width: 100%;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+
+/*Confirmatie stepper gedeelte*/
+.confirmDiv {
+  width: 80%;
+  height: 10em;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 5em;
+}

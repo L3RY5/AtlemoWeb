@@ -1,25 +1,48 @@
-.mat-typography{ height: auto; width: 95%;  font-family: "Times New Roman", Times, serif;margin-top: 2em;}
-.wedstrijdDiv{ width: auto;
-    height: auto;
-  
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-margin-top: 2em;}
-
-h1{
-    font-weight: bold;
-    text-decoration: underline;
-    font-size: 20px;
-    text-align: center;
+.mat-typography {
+  height: auto;
+  width: 95%;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 2em;
 }
 
-h3{
-  
-    font-style: italic;
-	margin-top: 3em;
-	font-size: 14px;
+.wedstrijdDiv {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2em;
 }
-.resultdiv{width:100%;height:auto;display:flex;flex-direction:row;}
-.resultIcon{width:2.5em;height:auto;padding-top:0.5em;}
-.resultext{width:40%;height:100%;margin-left:0.5em;padding-top:1em;}
+
+h1 {
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 20px;
+  text-align: center;
+}
+
+h3 {
+  font-style: italic;
+  margin-top: 3em;
+  font-size: 14px;
+}
+
+.resultdiv {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.resultIcon {
+  width: 2.5em;
+  height: auto;
+  padding-top: 0.5em;
+}
+
+.resultext {
+  width: 40%;
+  height: 100%;
+  margin-left: 0.5em;
+  padding-top: 1em;
+}
