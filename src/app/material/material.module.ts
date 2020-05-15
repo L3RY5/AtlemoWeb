@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import {MatButtonModule}from '@angular/material/button';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatIconModule}from '@angular/material/icon';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule } from '@angular/common/http';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTabsModule} from '@angular/material/tabs';
@@ -19,8 +19,8 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import { MatSidenavModule } from "@angular/material/sidenav";
-import { FlexLayoutModule } from "@angular/flex-layout";
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -49,15 +49,15 @@ const MaterialComponents=[
     MatSidenavModule,
     MatListModule,
     FlexLayoutModule
-  
+
 ]
 @NgModule({
-  
+
   /* imports: [MatButtonModule,MatIconModule,HttpClientModule],
   exports:[MatButtonModule,MatIconModule,HttpClientModule] */
   imports:[MaterialComponents],
   exports:[MaterialComponents]
 })
 export class MaterialModule {
- 
+
  }

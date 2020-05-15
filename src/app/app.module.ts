@@ -29,10 +29,11 @@ import { MultimediaComponent } from './multimedia/multimedia.component';
 registerLocaleData(localeNl, 'nl');
 
 const routes: Routes = [
-  { path: '',
-    redirectTo:'/home',
+  { path: '', component: HomepageComponent },
+  // Ensure previous setup doesn't break bookmarks and what not
+  { path: 'home',
+    redirectTo:'',
     pathMatch: 'full' },
-  { path: 'home', component: HomepageComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'inschrijving', component: InschrijvingComponent },
   { path: 'algemeneInformatie', component: AlgemeneInformatieComponent },
@@ -43,8 +44,9 @@ const routes: Routes = [
   { path: 'multimedia', component:  MultimediaComponent},
   { path: 'clubrecords', component: ClubrecordsComponent },
   { path: 'links', component: LinksComponent },
+  // TODO Proper 404 page
   { path: '**',
-    redirectTo:'/home',
+    redirectTo:'/',
     pathMatch: 'full' },
 ];
 
