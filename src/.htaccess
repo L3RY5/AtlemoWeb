@@ -4,3 +4,17 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 # If it does not, point the request to index.html instead
 RewriteRule ^([^?]*)$ /index.html [NC,L,QSA]
+
+<FilesMatch "\.(html|htm)$">
+  <IfModule mod_headers.c>
+    FileETag None
+    Header unset ETag
+    Header unset Pragma
+    Header unset Cache-Control
+    Header unset Last-Modified
+    Header set Pragma "no-cache"
+    Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+    # Copied from online source, but did not seem necessary in quick test.
+    # Header set Expires "Mon, 10 Apr 1972 00:00:00 GMT"
+  </IfModule>
+</FilesMatch>
