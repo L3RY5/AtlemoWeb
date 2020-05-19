@@ -26,7 +26,8 @@
         </section>
         <section class="results">
           <div>
-          <button (click)="entry.collapsed = !entry.collapsed" mat-stroked-button>Meer/Minder</button>
+          <button *ngIf="entry.collapsed" (click)="entry.collapsed = !entry.collapsed" mat-stroked-button>Meer</button>
+          <button *ngIf="!entry.collapsed" (click)="entry.collapsed = !entry.collapsed" mat-stroked-button>Minder</button>
           </div>
           <a *ngIf="entry.results_url" href="{{ entry.results_url }}" target="_blank"><button mat-stroked-button>Uitslagen</button></a>
           <div *ngIf="entry.album_url" class="albumicon">
