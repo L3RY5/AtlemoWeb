@@ -53,9 +53,17 @@
 
 .socialMediaHeader img {
   height: 50px;
+  /* Disabling for now, the Cera logo got too squished.
+   * Downside: some logos are bigger than others then.
+   * Added the max-width to the a element to ensure squishing at lower sizes
+   * Idea: Cera without baseline at smaller sizes?
   max-width: 70px;
+  */
+  max-width: 100%;
 }
-
+.socialMediaHeader a {
+  max-width: 20%;
+}
 
 /*tot 300px*/
 @media screen and (max-width: 300px) {
