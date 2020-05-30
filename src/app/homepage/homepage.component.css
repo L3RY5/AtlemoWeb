@@ -67,6 +67,16 @@ article.news_entry section.text {
   grid-area: text;
 }
 
+/* ::ng-deep is some angular construction to ensure styling still works with
+ * innerhtml filling in. Otherwise their rewriting of classes/html ruins the
+ * matching. */
+article.news_entry ::ng-deep h4 {
+  font-size: 1.2rem;
+  height: 100%;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
 article.news_entry h3 {
   font-size: 20px;
   font-weight: bold;
