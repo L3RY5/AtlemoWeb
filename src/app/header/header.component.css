@@ -44,9 +44,8 @@
 
 .socialMediaHeader {
   width: 100%;
-  height: 4em;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-evenly;
   padding-top: 0.5em;
 }
@@ -62,7 +61,12 @@
   max-width: 100%;
 }
 .socialMediaHeader a {
-  max-width: 20%;
+  text-align: center;
+}
+@media screen and (min-width: 600px) {
+  .socialMediaHeader {
+    grid-template-columns: auto auto auto auto auto auto;
+  }
 }
 
 /*tot 300px*/
